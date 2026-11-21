@@ -11,6 +11,8 @@ TSV 文件采用 UTF-8，首行为列名。行首 id 是该表的稳定记录号
 - `materials/releases.tsv`。limit 是按 Unicode 字符计的可排字格，phase 是此发表物所处状态。source_event 可录入发布团队的来源事件。
 - `materials/print_log.tsv`。surface 是当前安装的版面，exhibits 是版面上实际编排的展项，竖线分隔。
 - `materials/priorities.tsv`。importance 是编辑确定的必讲或补充主题。allowed_formats 是素材台登记的渠道，竖线分隔。
+- `materials/issuances.tsv`。出具与存放登记，board_code 为印在该份实物上的码标。
+- `materials/permissions.tsv`。场馆收到的授权变更来函，at 为收到时间。
 
 ## 运行资料检查
 

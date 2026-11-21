@@ -2,3 +2,5 @@ id	lang	topic	refs	draft
 E1	zh	改善良率	V1|V2	一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。
 E2	en	改善良率	V1|V4	Two independent validations confirm a 10% plant-wide yield increase.
 E3	zh	返工计划	V3	新设备使整体返工率下降 10%。
+E4	en	夜班表现	V2|V5	In the same night trial, first-line yield rose by six percentage points.
+E5	zh	返工计划	V3|V6	首次换型后日夜合计返工率预计减少一成。

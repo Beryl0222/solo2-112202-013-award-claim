@@ -33,6 +33,20 @@
       "theme",
       "importance",
       "allowed_formats"
+    ],
+    "issuances.tsv": [
+      "id",
+      "surface",
+      "issued",
+      "board_code",
+      "exposure",
+      "note"
+    ],
+    "permissions.tsv": [
+      "id",
+      "source",
+      "at",
+      "note"
     ]
   },
   "references": [
@@ -60,6 +74,16 @@
       "print_log.tsv",
       "surface",
       "releases.tsv"
+    ],
+    [
+      "issuances.tsv",
+      "surface",
+      "releases.tsv"
+    ],
+    [
+      "permissions.tsv",
+      "source",
+      "sources.tsv"
     ]
   ],
   "compound_keys": []
