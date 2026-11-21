@@ -14,6 +14,8 @@ TSV 文件采用 UTF-8，首行为列名。行首 id 是该表的稳定记录号
 - `materials/issuances.tsv`。出具与存放登记，board_code 为印在该份实物上的码标。
 - `materials/permissions.tsv`。场馆收到的授权变更来函，at 为收到时间。
 
+展板的 limit 记录字号固定后的半宽格数。空格、ASCII 字母、数字和标点均占一格，汉字和全宽标点占两格。内页按整份文字共用字格。
+
 ## 运行资料检查
 
 使用 CPython 3.11.2 和标准库。资料检查仅读取输入。
