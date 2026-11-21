@@ -27,6 +27,12 @@
       "surface",
       "exhibits",
       "sources"
+    ],
+    "priorities.tsv": [
+      "id",
+      "theme",
+      "importance",
+      "allowed_formats"
     ]
   },
   "references": [
