@@ -1,0 +1,60 @@
+{
+  "columns": {
+    "sources.tsv": [
+      "id",
+      "trial",
+      "audience",
+      "relates",
+      "plan",
+      "text"
+    ],
+    "exhibits.tsv": [
+      "id",
+      "lang",
+      "topic",
+      "refs",
+      "draft"
+    ],
+    "releases.tsv": [
+      "id",
+      "channel",
+      "limit",
+      "phase",
+      "source_event"
+    ],
+    "print_log.tsv": [
+      "id",
+      "surface",
+      "exhibits",
+      "sources"
+    ]
+  },
+  "references": [
+    [
+      "sources.tsv",
+      "relates",
+      "sources.tsv"
+    ],
+    [
+      "exhibits.tsv",
+      "refs",
+      "sources.tsv"
+    ],
+    [
+      "print_log.tsv",
+      "sources",
+      "sources.tsv"
+    ],
+    [
+      "print_log.tsv",
+      "exhibits",
+      "exhibits.tsv"
+    ],
+    [
+      "print_log.tsv",
+      "surface",
+      "releases.tsv"
+    ]
+  ],
+  "compound_keys": []
+}
