@@ -1,0 +1,4736 @@
+{
+  "project": "制造成果参展摘要与跨展项口径核对",
+  "selected_themes": [
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "cell_width_rule": "ASCII=1；汉字/全宽 W/F=2；换行=0；各展板按 releases.limit，P3内页整份共用260格",
+  "priorities": [
+    {
+      "id": "T1",
+      "theme": "改善良率",
+      "importance": "必讲",
+      "allowed_formats": "现场中文|现场英文|扫码内页"
+    },
+    {
+      "id": "T2",
+      "theme": "返工计划",
+      "importance": "补充",
+      "allowed_formats": "扫码内页"
+    },
+    {
+      "id": "T3",
+      "theme": "夜班表现",
+      "importance": "补充",
+      "allowed_formats": "现场中文|现场英文"
+    }
+  ],
+  "source_policies": [
+    {
+      "source_id": "V1",
+      "audience": "现场公开",
+      "status": "withdrawn",
+      "default_channels": [
+        "现场中文",
+        "现场英文"
+      ],
+      "granted_channels": [],
+      "denied_channels": [
+        "扫码内页",
+        "现场中文",
+        "现场英文"
+      ],
+      "events": [
+        {
+          "at": "2026-10-21T11:20",
+          "note": "停止展板和扫码继续引用本试验初稿，保留区分初稿和复算的说明",
+          "effect": "withdraw",
+          "channels": [
+            "扫码内页",
+            "现场中文",
+            "现场英文"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "V4",
+      "audience": "现场公开",
+      "status": "active",
+      "default_channels": [
+        "现场中文",
+        "现场英文"
+      ],
+      "granted_channels": [
+        "扫码内页",
+        "现场中文",
+        "现场英文"
+      ],
+      "denied_channels": [],
+      "events": [
+        {
+          "at": "2026-10-21T11:25",
+          "note": "复算段可以用于本届公众展板和扫码页",
+          "effect": "allow",
+          "channels": [
+            "扫码内页",
+            "现场中文",
+            "现场英文"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "V2",
+      "audience": "仅审核",
+      "status": "internal_only",
+      "default_channels": [],
+      "granted_channels": [],
+      "denied_channels": [
+        "扫码内页",
+        "现场中文",
+        "现场英文"
+      ],
+      "events": [
+        {
+          "at": "2026-10-21T11:30",
+          "note": "夜班细表只供编辑核查，未获外发准许",
+          "effect": "internal",
+          "channels": [
+            "扫码内页",
+            "现场中文",
+            "现场英文"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "V3",
+      "audience": "扫码公开",
+      "status": "active",
+      "default_channels": [
+        "扫码内页"
+      ],
+      "granted_channels": [],
+      "denied_channels": [],
+      "events": []
+    },
+    {
+      "source_id": "V5",
+      "audience": "现场公开",
+      "status": "active",
+      "default_channels": [
+        "现场中文",
+        "现场英文"
+      ],
+      "granted_channels": [],
+      "denied_channels": [],
+      "events": []
+    },
+    {
+      "source_id": "V6",
+      "audience": "仅审核",
+      "status": "internal_only",
+      "default_channels": [],
+      "granted_channels": [],
+      "denied_channels": [],
+      "events": []
+    }
+  ],
+  "claims": {
+    "V1": [
+      {
+        "claim_id": "V1-C1",
+        "record_id": "V1",
+        "lang": "zh",
+        "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": "L1",
+        "scope": {
+          "line": "L1",
+          "scale": "line"
+        },
+        "baseline": 70.0,
+        "current": 80.0,
+        "delta": 10.0,
+        "delta_unit": "percentage_point",
+        "relative_pct": 14.285714285714285,
+        "direction": "up",
+        "modality": "observed",
+        "measured": null,
+        "comparator": "prior_month_same_line+same_week",
+        "time_phrase": "比上月同线；一周对照",
+        "trial": "T8",
+        "explicit_refs": [],
+        "anaphora": [],
+        "provisional": false
+      }
+    ],
+    "V2": [
+      {
+        "claim_id": "V2-C1",
+        "record_id": "V2",
+        "lang": "zh",
+        "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": "L1",
+        "scope": {
+          "line": "L1",
+          "shift": "night",
+          "scale": "line"
+        },
+        "baseline": 60.0,
+        "current": 66.0,
+        "delta": 6.0,
+        "delta_unit": "percentage_point",
+        "relative_pct": 10.0,
+        "direction": "up",
+        "modality": "observed",
+        "measured": null,
+        "comparator": "same_week",
+        "time_phrase": "同一周",
+        "trial": "T8",
+        "explicit_refs": [
+          "V1"
+        ],
+        "anaphora": [],
+        "provisional": false
+      }
+    ],
+    "V3": [
+      {
+        "claim_id": "V3-C1",
+        "record_id": "V3",
+        "lang": "zh",
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "claim_type": "measurement",
+        "metric": "rework_rate",
+        "subject": "overall",
+        "scope": {
+          "scale": "overall"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": 10.0,
+        "delta_unit": "percent",
+        "relative_pct": null,
+        "direction": "down",
+        "modality": "expected",
+        "measured": false,
+        "comparator": null,
+        "time_phrase": null,
+        "trial": "T9",
+        "explicit_refs": [],
+        "anaphora": [],
+        "provisional": false
+      }
+    ],
+    "V4": [
+      {
+        "claim_id": "V4-C1",
+        "record_id": "V4",
+        "lang": "zh",
+        "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": "L1",
+        "scope": {
+          "line": "L1",
+          "scale": "line"
+        },
+        "baseline": 70.0,
+        "current": 80.0,
+        "delta": 10.0,
+        "delta_unit": "percentage_point",
+        "relative_pct": 14.285714285714285,
+        "direction": "up",
+        "modality": "observed",
+        "measured": null,
+        "comparator": "same_week",
+        "time_phrase": "同一周",
+        "trial": "T8",
+        "explicit_refs": [
+          "V1"
+        ],
+        "anaphora": [],
+        "provisional": false
+      }
+    ],
+    "V5": [
+      {
+        "claim_id": "V5-C1",
+        "record_id": "V5",
+        "lang": "zh",
+        "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": "L2",
+        "scope": {
+          "phase": "after_changeover",
+          "line": "L2",
+          "scale": "line",
+          "shift": "day",
+          "collection_boundary": "day_shift_work_orders_only"
+        },
+        "baseline": 92.0,
+        "current": 91.0,
+        "delta": 1.0,
+        "delta_unit": "percentage_point",
+        "relative_pct": 1.0869565217391304,
+        "direction": "down",
+        "modality": "observed",
+        "measured": null,
+        "comparator": "same_period+anaphoric_metric",
+        "time_phrase": "同期；同名指标",
+        "trial": "T10",
+        "explicit_refs": [],
+        "anaphora": [
+          {
+            "phrase": "同期",
+            "refers_to": "contextual_reference"
+          },
+          {
+            "phrase": "同名指标",
+            "refers_to": "contextual_reference"
+          }
+        ],
+        "provisional": false
+      }
+    ],
+    "V6": [
+      {
+        "claim_id": "V6-C1",
+        "record_id": "V6",
+        "lang": "zh",
+        "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": null,
+        "scope": {
+          "shift": "both",
+          "aggregation": "day_night_total"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": null,
+        "delta_unit": null,
+        "relative_pct": null,
+        "direction": null,
+        "modality": "observed",
+        "measured": false,
+        "comparator": null,
+        "time_phrase": null,
+        "trial": "T8",
+        "explicit_refs": [
+          "V1"
+        ],
+        "anaphora": [],
+        "provisional": true
+      }
+    ]
+  },
+  "anaphora": [
+    {
+      "record_kind": "source",
+      "record_id": "V5",
+      "claim_id": "V5-C1",
+      "phrase": "同期",
+      "type": "contextual_reference",
+      "status": "resolved_to_registered_window_without_calendar_dates",
+      "resolved_comparator": "same_period/same_week",
+      "related_source_ids": [
+        "V1",
+        "V2"
+      ],
+      "meaning": "在本包中指 V1/V2 所述同一周对照窗口；资料未给具体公历日期，公开短写只能写“同期/同周”，不能编造日期。"
+    },
+    {
+      "record_kind": "source",
+      "record_id": "V5",
+      "claim_id": "V5-C1",
+      "phrase": "同名指标",
+      "type": "contextual_reference",
+      "status": "resolved_from_referencing_exhibit",
+      "resolved_metric": "yield",
+      "meaning": "通过同时引用该来源的展项上下文确定指标名；不得据此增加其他范围。"
+    },
+    {
+      "record_kind": "exhibit",
+      "record_id": "E1",
+      "claim_id": "E1-C1",
+      "phrase": "同一试验",
+      "type": "contextual_reference",
+      "status": "resolved",
+      "resolved_trial": "T8",
+      "meaning": "对应来件登记的 T8 试验"
+    },
+    {
+      "record_kind": "exhibit",
+      "record_id": "E1",
+      "claim_id": "E1-C2",
+      "phrase": "同一试验",
+      "type": "contextual_reference",
+      "status": "resolved",
+      "resolved_trial": "T8",
+      "meaning": "对应来件登记的 T8 试验"
+    },
+    {
+      "record_kind": "exhibit",
+      "record_id": "E1",
+      "claim_id": "E1-C3",
+      "phrase": "同一试验",
+      "type": "contextual_reference",
+      "status": "resolved",
+      "resolved_trial": "T8",
+      "meaning": "对应来件登记的 T8 试验"
+    },
+    {
+      "record_kind": "exhibit",
+      "record_id": "E4",
+      "claim_id": "E4-C1",
+      "phrase": "same night trial",
+      "type": "contextual_reference",
+      "status": "resolved",
+      "resolved_trial": "T8",
+      "meaning": "对应来件登记的 T8 试验"
+    }
+  ],
+  "zones": {
+    "fact_zone": [
+      {
+        "fact_id": "F-V3-C1",
+        "source_id": "V3",
+        "claim_id": "V3-C1",
+        "trial": "T9",
+        "audience": "扫码公开",
+        "lang": "zh",
+        "metric": "rework_rate",
+        "subject": "overall",
+        "scope": {
+          "scale": "overall"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": 10.0,
+        "delta_unit": "percent",
+        "delta_pp": null,
+        "relative_pct": null,
+        "direction": "down",
+        "modality": "expected",
+        "measured": false,
+        "comparator": null,
+        "time_phrase": null,
+        "provisional": false,
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "usable_channels": [
+          "扫码内页"
+        ],
+        "zone": "事实区",
+        "zone_rule": "可按 usable_channels 进入事实区；预期事项必须保留预计/未测量标记"
+      },
+      {
+        "fact_id": "F-V4-C1",
+        "source_id": "V4",
+        "claim_id": "V4-C1",
+        "trial": "T8",
+        "audience": "现场公开",
+        "lang": "zh",
+        "metric": "yield",
+        "subject": "L1",
+        "scope": {
+          "line": "L1",
+          "scale": "line"
+        },
+        "baseline": 70.0,
+        "current": 80.0,
+        "delta": 10.0,
+        "delta_unit": "percentage_point",
+        "delta_pp": 10.0,
+        "relative_pct": 14.285714285714285,
+        "direction": "up",
+        "modality": "observed",
+        "measured": null,
+        "comparator": "same_week",
+        "time_phrase": "同一周",
+        "provisional": false,
+        "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+        "usable_channels": [
+          "现场中文",
+          "现场英文",
+          "扫码内页"
+        ],
+        "zone": "事实区",
+        "zone_rule": "可按 usable_channels 进入事实区；预期事项必须保留预计/未测量标记"
+      },
+      {
+        "fact_id": "F-V5-C1",
+        "source_id": "V5",
+        "claim_id": "V5-C1",
+        "trial": "T10",
+        "audience": "现场公开",
+        "lang": "zh",
+        "metric": "yield",
+        "subject": "L2",
+        "scope": {
+          "phase": "after_changeover",
+          "line": "L2",
+          "scale": "line",
+          "shift": "day",
+          "collection_boundary": "day_shift_work_orders_only"
+        },
+        "baseline": 92.0,
+        "current": 91.0,
+        "delta": 1.0,
+        "delta_unit": "percentage_point",
+        "delta_pp": -1.0,
+        "relative_pct": 1.0869565217391304,
+        "direction": "down",
+        "modality": "observed",
+        "measured": null,
+        "comparator": "same_period+anaphoric_metric",
+        "time_phrase": "同期；同名指标",
+        "provisional": false,
+        "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+        "usable_channels": [
+          "现场中文",
+          "现场英文"
+        ],
+        "zone": "事实区",
+        "zone_rule": "可按 usable_channels 进入事实区；预期事项必须保留预计/未测量标记"
+      }
+    ],
+    "pending_zone": [
+      {
+        "exhibit_id": "E1",
+        "theme_id": "T1",
+        "code": "PENDING_VERIFICATION",
+        "message": "“workshop”层级的验证结论没有同范围来文证据；该核心范围只能降级为待核，不能进入事实区",
+        "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+        "source_ids": [
+          "V1",
+          "V2"
+        ],
+        "material_request_ids": [
+          "MR-E1-WORKSHOP",
+          "MR-E2-PLANT-INDEPENDENCE"
+        ],
+        "status": "pending_verification",
+        "status_zh": "待核",
+        "published_as_fact": false
+      },
+      {
+        "exhibit_id": "E2",
+        "theme_id": "T1",
+        "code": "PENDING_VERIFICATION",
+        "message": "该主张的核心范围或单位不能由所引来文支持；在补证前只能列为待核",
+        "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+        "source_ids": [
+          "V1",
+          "V4"
+        ],
+        "material_request_ids": [
+          "MR-E1-WORKSHOP",
+          "MR-E2-PLANT-INDEPENDENCE"
+        ],
+        "status": "pending_verification",
+        "status_zh": "待核",
+        "published_as_fact": false
+      },
+      {
+        "exhibit_id": "E2",
+        "theme_id": "T1",
+        "code": "PENDING_VERIFICATION",
+        "message": "“plant”层级的验证结论没有同范围来文证据；该核心范围只能降级为待核，不能进入事实区",
+        "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+        "source_ids": [
+          "V1",
+          "V4"
+        ],
+        "material_request_ids": [
+          "MR-E1-WORKSHOP",
+          "MR-E2-PLANT-INDEPENDENCE"
+        ],
+        "status": "pending_verification",
+        "status_zh": "待核",
+        "published_as_fact": false
+      },
+      {
+        "exhibit_id": "E5",
+        "theme_id": "T2",
+        "code": "UNSUPPORTED_CORE_SCOPE",
+        "message": "缺少日夜合计口径；无证据的扩写范围降级待核，只能保留来源实际覆盖的短写",
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "source_ids": [
+          "V3"
+        ],
+        "material_request_ids": [
+          "MR-E5-REWORK-AFTER-CHANGEOVER"
+        ],
+        "status": "pending_verification",
+        "status_zh": "待核",
+        "published_as_fact": false
+      },
+      {
+        "exhibit_id": "E5",
+        "theme_id": "T2",
+        "code": "UNSUPPORTED_CORE_SCOPE",
+        "message": "缺少首次换型后的阶段边界；无证据的扩写范围降级待核，只能保留来源实际覆盖的短写",
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "source_ids": [
+          "V3"
+        ],
+        "material_request_ids": [
+          "MR-E5-REWORK-AFTER-CHANGEOVER"
+        ],
+        "status": "pending_verification",
+        "status_zh": "待核",
+        "published_as_fact": false
+      }
+    ],
+    "blocked_zone": [
+      {
+        "exhibit_id": "E1",
+        "theme_id": "T1",
+        "code": "AUTHORIZATION_MISSING",
+        "message": "V2 仅限编辑核查、未获外发授权，且无同边界授权替换件",
+        "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+        "source_ids": [
+          "V2"
+        ],
+        "material_request_ids": [
+          "MR-E1-WORKSHOP",
+          "MR-E2-PLANT-INDEPENDENCE"
+        ],
+        "status": "blocked_from_publication",
+        "status_zh": "禁止公开发布"
+      },
+      {
+        "exhibit_id": "E2",
+        "theme_id": "T1",
+        "code": "SCOPE_ESCALATION",
+        "message": "对象范围过宽：主张为plant，证据仅为line",
+        "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+        "source_ids": [
+          "V1"
+        ],
+        "material_request_ids": [
+          "MR-E1-WORKSHOP",
+          "MR-E2-PLANT-INDEPENDENCE"
+        ],
+        "status": "blocked_from_publication",
+        "status_zh": "禁止公开发布"
+      },
+      {
+        "exhibit_id": "E4",
+        "theme_id": "T3",
+        "code": "AUTHORIZATION_MISSING",
+        "message": "V2 仅限编辑核查、未获外发授权，且无同边界授权替换件",
+        "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+        "source_ids": [
+          "V2"
+        ],
+        "material_request_ids": [
+          "MR-E4-NIGHT-AUTH"
+        ],
+        "status": "blocked_from_publication",
+        "status_zh": "禁止公开发布"
+      },
+      {
+        "exhibit_id": "E5",
+        "theme_id": "T2",
+        "code": "AUTHORIZATION_MISSING",
+        "message": "V6 仅限编辑核查、未获外发授权，且无同边界授权替换件",
+        "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+        "source_ids": [
+          "V6"
+        ],
+        "material_request_ids": [
+          "MR-E5-REWORK-AFTER-CHANGEOVER"
+        ],
+        "status": "blocked_from_publication",
+        "status_zh": "禁止公开发布"
+      }
+    ]
+  },
+  "corroboration_ledger": [
+    {
+      "trial_id": "T8",
+      "source_ids": [
+        "V1",
+        "V2",
+        "V4",
+        "V6"
+      ],
+      "fact_ids": [
+        "F-V1-C1",
+        "F-V2-C1",
+        "F-V4-C1",
+        "F-V6-C1"
+      ],
+      "feasible_wording_count": 3,
+      "independent_validation_count": 1,
+      "rule": "同一 trial 的初稿、复算、多个短写或多个版面重复排印，均不增加独立印证次数"
+    },
+    {
+      "trial_id": "T9",
+      "source_ids": [
+        "V3"
+      ],
+      "fact_ids": [
+        "F-V3-C1"
+      ],
+      "feasible_wording_count": 1,
+      "independent_validation_count": 1,
+      "rule": "同一 trial 的初稿、复算、多个短写或多个版面重复排印，均不增加独立印证次数"
+    },
+    {
+      "trial_id": "T10",
+      "source_ids": [
+        "V5"
+      ],
+      "fact_ids": [
+        "F-V5-C1"
+      ],
+      "feasible_wording_count": 0,
+      "independent_validation_count": 1,
+      "rule": "同一 trial 的初稿、复算、多个短写或多个版面重复排印，均不增加独立印证次数"
+    }
+  ],
+  "exhibit_claims": {
+    "E1": [
+      {
+        "claim_id": "E1-C1",
+        "record_id": "E1",
+        "lang": "zh",
+        "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": "L1",
+        "scope": {
+          "line": "L1",
+          "scale": "line"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": 10.0,
+        "delta_unit": "percentage_point",
+        "relative_pct": null,
+        "direction": "up",
+        "modality": "asserted_observed",
+        "measured": null,
+        "comparator": "same_trial",
+        "time_phrase": "同一试验",
+        "trial": null,
+        "explicit_refs": [
+          "V1",
+          "V2"
+        ],
+        "anaphora": [
+          {
+            "phrase": "同一试验",
+            "refers_to": "contextual_reference"
+          }
+        ],
+        "provisional": false
+      },
+      {
+        "claim_id": "E1-C2",
+        "record_id": "E1",
+        "lang": "zh",
+        "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+        "claim_type": "validation",
+        "metric": "yield",
+        "subject": "workshop",
+        "scope": {
+          "scale": "workshop"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": null,
+        "delta_unit": null,
+        "relative_pct": null,
+        "direction": null,
+        "modality": "asserted_observed",
+        "measured": null,
+        "comparator": "same_trial",
+        "time_phrase": "同一试验",
+        "trial": null,
+        "explicit_refs": [
+          "V1",
+          "V2"
+        ],
+        "anaphora": [
+          {
+            "phrase": "同一试验",
+            "refers_to": "contextual_reference"
+          }
+        ],
+        "provisional": false
+      },
+      {
+        "claim_id": "E1-C3",
+        "record_id": "E1",
+        "lang": "zh",
+        "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": null,
+        "scope": {
+          "shift": "night"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": 10.0,
+        "delta_unit": "relative_percent",
+        "relative_pct": 10.0,
+        "direction": "up",
+        "modality": "asserted_observed",
+        "measured": null,
+        "comparator": "same_trial",
+        "time_phrase": "同一试验",
+        "trial": null,
+        "explicit_refs": [
+          "V1",
+          "V2"
+        ],
+        "anaphora": [
+          {
+            "phrase": "同一试验",
+            "refers_to": "contextual_reference"
+          }
+        ],
+        "provisional": false
+      }
+    ],
+    "E2": [
+      {
+        "claim_id": "E2-C1",
+        "record_id": "E2",
+        "lang": "en",
+        "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": "plant",
+        "scope": {
+          "scale": "plant"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": 10.0,
+        "delta_unit": "percent",
+        "relative_pct": null,
+        "direction": "up",
+        "modality": "asserted_observed",
+        "measured": null,
+        "comparator": null,
+        "time_phrase": null,
+        "trial": null,
+        "explicit_refs": [
+          "V1",
+          "V4"
+        ],
+        "anaphora": [],
+        "provisional": false
+      },
+      {
+        "claim_id": "E2-C2",
+        "record_id": "E2",
+        "lang": "en",
+        "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+        "claim_type": "validation",
+        "metric": "yield",
+        "subject": "plant",
+        "scope": {
+          "scale": "plant",
+          "claimed_validation_count": 2,
+          "claimed_independent": true
+        },
+        "baseline": null,
+        "current": null,
+        "delta": null,
+        "delta_unit": null,
+        "relative_pct": null,
+        "direction": null,
+        "modality": "asserted_observed",
+        "measured": null,
+        "comparator": null,
+        "time_phrase": null,
+        "trial": null,
+        "explicit_refs": [
+          "V1",
+          "V4"
+        ],
+        "anaphora": [],
+        "provisional": false
+      }
+    ],
+    "E3": [
+      {
+        "claim_id": "E3-C1",
+        "record_id": "E3",
+        "lang": "zh",
+        "quote": "新设备使整体返工率下降 10%。",
+        "claim_type": "measurement",
+        "metric": "rework_rate",
+        "subject": "overall",
+        "scope": {
+          "scale": "overall",
+          "phase": "new_equipment_first_use"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": 10.0,
+        "delta_unit": "percent",
+        "relative_pct": null,
+        "direction": "down",
+        "modality": "asserted_observed",
+        "measured": null,
+        "comparator": null,
+        "time_phrase": null,
+        "trial": null,
+        "explicit_refs": [
+          "V3"
+        ],
+        "anaphora": [],
+        "provisional": false
+      }
+    ],
+    "E4": [
+      {
+        "claim_id": "E4-C1",
+        "record_id": "E4",
+        "lang": "en",
+        "quote": "In the same night trial, first-line yield rose by six percentage points.",
+        "claim_type": "measurement",
+        "metric": "yield",
+        "subject": "L1",
+        "scope": {
+          "line": "L1",
+          "scale": "line",
+          "shift": "night"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": 6.0,
+        "delta_unit": "percentage_point",
+        "relative_pct": null,
+        "direction": "up",
+        "modality": "asserted_observed",
+        "measured": null,
+        "comparator": "same_trial",
+        "time_phrase": "same night trial",
+        "trial": null,
+        "explicit_refs": [
+          "V2",
+          "V5"
+        ],
+        "anaphora": [
+          {
+            "phrase": "same night trial",
+            "refers_to": "contextual_reference"
+          }
+        ],
+        "provisional": false
+      }
+    ],
+    "E5": [
+      {
+        "claim_id": "E5-C1",
+        "record_id": "E5",
+        "lang": "zh",
+        "quote": "首次换型后日夜合计返工率预计减少一成。",
+        "claim_type": "measurement",
+        "metric": "rework_rate",
+        "subject": null,
+        "scope": {
+          "shift": "both",
+          "aggregation": "day_night_total",
+          "phase": "after_changeover"
+        },
+        "baseline": null,
+        "current": null,
+        "delta": 10.0,
+        "delta_unit": "relative_percent",
+        "relative_pct": 10.0,
+        "direction": "down",
+        "modality": "expected",
+        "measured": false,
+        "comparator": null,
+        "time_phrase": null,
+        "trial": null,
+        "explicit_refs": [
+          "V3",
+          "V6"
+        ],
+        "anaphora": [],
+        "provisional": false
+      }
+    ]
+  },
+  "facts": [
+    {
+      "fact_id": "F-V1-C1",
+      "source_id": "V1",
+      "claim_id": "V1-C1",
+      "trial": "T8",
+      "audience": "现场公开",
+      "lang": "zh",
+      "metric": "yield",
+      "subject": "L1",
+      "scope": {
+        "line": "L1",
+        "scale": "line"
+      },
+      "baseline": 70.0,
+      "current": 80.0,
+      "delta": 10.0,
+      "delta_unit": "percentage_point",
+      "delta_pp": 10.0,
+      "relative_pct": 14.285714285714285,
+      "direction": "up",
+      "modality": "observed",
+      "measured": null,
+      "comparator": "prior_month_same_line+same_week",
+      "time_phrase": "比上月同线；一周对照",
+      "provisional": false,
+      "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+      "channels": {
+        "现场中文": {
+          "usable": false,
+          "reason": "来源已撤回，不能继续作为事实引用"
+        },
+        "现场英文": {
+          "usable": false,
+          "reason": "来源已撤回，不能继续作为事实引用"
+        },
+        "扫码内页": {
+          "usable": false,
+          "reason": "来源已撤回，不能继续作为事实引用"
+        }
+      }
+    },
+    {
+      "fact_id": "F-V2-C1",
+      "source_id": "V2",
+      "claim_id": "V2-C1",
+      "trial": "T8",
+      "audience": "仅审核",
+      "lang": "zh",
+      "metric": "yield",
+      "subject": "L1",
+      "scope": {
+        "line": "L1",
+        "shift": "night",
+        "scale": "line"
+      },
+      "baseline": 60.0,
+      "current": 66.0,
+      "delta": 6.0,
+      "delta_unit": "percentage_point",
+      "delta_pp": 6.0,
+      "relative_pct": 10.0,
+      "direction": "up",
+      "modality": "observed",
+      "measured": null,
+      "comparator": "same_week",
+      "time_phrase": "同一周",
+      "provisional": false,
+      "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+      "channels": {
+        "现场中文": {
+          "usable": false,
+          "reason": "来源仅限编辑核查，未获外发授权"
+        },
+        "现场英文": {
+          "usable": false,
+          "reason": "来源仅限编辑核查，未获外发授权"
+        },
+        "扫码内页": {
+          "usable": false,
+          "reason": "来源仅限编辑核查，未获外发授权"
+        }
+      }
+    },
+    {
+      "fact_id": "F-V3-C1",
+      "source_id": "V3",
+      "claim_id": "V3-C1",
+      "trial": "T9",
+      "audience": "扫码公开",
+      "lang": "zh",
+      "metric": "rework_rate",
+      "subject": "overall",
+      "scope": {
+        "scale": "overall"
+      },
+      "baseline": null,
+      "current": null,
+      "delta": 10.0,
+      "delta_unit": "percent",
+      "delta_pp": null,
+      "relative_pct": null,
+      "direction": "down",
+      "modality": "expected",
+      "measured": false,
+      "comparator": null,
+      "time_phrase": null,
+      "provisional": false,
+      "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+      "channels": {
+        "现场中文": {
+          "usable": false,
+          "reason": "来件最高披露范围为扫码公开，未授权现场中文"
+        },
+        "现场英文": {
+          "usable": false,
+          "reason": "来件最高披露范围为扫码公开，未授权现场英文"
+        },
+        "扫码内页": {
+          "usable": true,
+          "reason": "可用"
+        }
+      }
+    },
+    {
+      "fact_id": "F-V4-C1",
+      "source_id": "V4",
+      "claim_id": "V4-C1",
+      "trial": "T8",
+      "audience": "现场公开",
+      "lang": "zh",
+      "metric": "yield",
+      "subject": "L1",
+      "scope": {
+        "line": "L1",
+        "scale": "line"
+      },
+      "baseline": 70.0,
+      "current": 80.0,
+      "delta": 10.0,
+      "delta_unit": "percentage_point",
+      "delta_pp": 10.0,
+      "relative_pct": 14.285714285714285,
+      "direction": "up",
+      "modality": "observed",
+      "measured": null,
+      "comparator": "same_week",
+      "time_phrase": "同一周",
+      "provisional": false,
+      "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+      "channels": {
+        "现场中文": {
+          "usable": true,
+          "reason": "可用"
+        },
+        "现场英文": {
+          "usable": true,
+          "reason": "可用"
+        },
+        "扫码内页": {
+          "usable": true,
+          "reason": "可用"
+        }
+      }
+    },
+    {
+      "fact_id": "F-V5-C1",
+      "source_id": "V5",
+      "claim_id": "V5-C1",
+      "trial": "T10",
+      "audience": "现场公开",
+      "lang": "zh",
+      "metric": "yield",
+      "subject": "L2",
+      "scope": {
+        "phase": "after_changeover",
+        "line": "L2",
+        "scale": "line",
+        "shift": "day",
+        "collection_boundary": "day_shift_work_orders_only"
+      },
+      "baseline": 92.0,
+      "current": 91.0,
+      "delta": 1.0,
+      "delta_unit": "percentage_point",
+      "delta_pp": -1.0,
+      "relative_pct": 1.0869565217391304,
+      "direction": "down",
+      "modality": "observed",
+      "measured": null,
+      "comparator": "same_period+anaphoric_metric",
+      "time_phrase": "同期；同名指标",
+      "provisional": false,
+      "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+      "channels": {
+        "现场中文": {
+          "usable": true,
+          "reason": "可用"
+        },
+        "现场英文": {
+          "usable": true,
+          "reason": "可用"
+        },
+        "扫码内页": {
+          "usable": false,
+          "reason": "来件最高披露范围为现场公开，未授权扫码内页"
+        }
+      }
+    },
+    {
+      "fact_id": "F-V6-C1",
+      "source_id": "V6",
+      "claim_id": "V6-C1",
+      "trial": "T8",
+      "audience": "仅审核",
+      "lang": "zh",
+      "metric": "yield",
+      "subject": null,
+      "scope": {
+        "shift": "both",
+        "aggregation": "day_night_total"
+      },
+      "baseline": null,
+      "current": null,
+      "delta": null,
+      "delta_unit": null,
+      "delta_pp": null,
+      "relative_pct": null,
+      "direction": null,
+      "modality": "observed",
+      "measured": false,
+      "comparator": null,
+      "time_phrase": null,
+      "provisional": true,
+      "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+      "channels": {
+        "现场中文": {
+          "usable": false,
+          "reason": "来源仅限编辑核查，未获外发授权"
+        },
+        "现场英文": {
+          "usable": false,
+          "reason": "来源仅限编辑核查，未获外发授权"
+        },
+        "扫码内页": {
+          "usable": false,
+          "reason": "来源仅限编辑核查，未获外发授权"
+        }
+      }
+    }
+  ],
+  "exhibit_reviews": [
+    {
+      "exhibit_id": "E1",
+      "lang": "zh",
+      "theme_id": "T1",
+      "topic": "改善良率",
+      "refs": [
+        "V1",
+        "V2"
+      ],
+      "draft": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+      "draft_width": 66,
+      "primary_channel": "现场中文",
+      "primary_limit": 55,
+      "claims": [
+        {
+          "claim": {
+            "claim_id": "E1-C1",
+            "record_id": "E1",
+            "lang": "zh",
+            "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+            "claim_type": "measurement",
+            "metric": "yield",
+            "subject": "L1",
+            "scope": {
+              "line": "L1",
+              "scale": "line"
+            },
+            "baseline": null,
+            "current": null,
+            "delta": 10.0,
+            "delta_unit": "percentage_point",
+            "relative_pct": null,
+            "direction": "up",
+            "modality": "asserted_observed",
+            "measured": null,
+            "comparator": "same_trial",
+            "time_phrase": "同一试验",
+            "trial": null,
+            "explicit_refs": [
+              "V1",
+              "V2"
+            ],
+            "anaphora": [
+              {
+                "phrase": "同一试验",
+                "refers_to": "contextual_reference"
+              }
+            ],
+            "provisional": false
+          },
+          "attempts": [
+            {
+              "source_id": "V1",
+              "source_claim_id": "V1-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "match": true,
+              "partial": false,
+              "score": 100,
+              "scope_issues": [],
+              "number_issues": []
+            },
+            {
+              "source_id": "V2",
+              "source_claim_id": "V2-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "shift": "night",
+                "scale": "line"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [],
+              "number_issues": [
+                "百分点差不符：主张10pp，证据6.0pp"
+              ]
+            }
+          ],
+          "best": {
+            "source_id": "V1",
+            "score": 100,
+            "partial": false,
+            "scope_issues": []
+          }
+        },
+        {
+          "claim": {
+            "claim_id": "E1-C2",
+            "record_id": "E1",
+            "lang": "zh",
+            "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+            "claim_type": "validation",
+            "metric": "yield",
+            "subject": "workshop",
+            "scope": {
+              "scale": "workshop"
+            },
+            "baseline": null,
+            "current": null,
+            "delta": null,
+            "delta_unit": null,
+            "relative_pct": null,
+            "direction": null,
+            "modality": "asserted_observed",
+            "measured": null,
+            "comparator": "same_trial",
+            "time_phrase": "同一试验",
+            "trial": null,
+            "explicit_refs": [
+              "V1",
+              "V2"
+            ],
+            "anaphora": [
+              {
+                "phrase": "同一试验",
+                "refers_to": "contextual_reference"
+              }
+            ],
+            "provisional": false
+          },
+          "attempts": [
+            {
+              "source_id": "V1",
+              "source_claim_id": "V1-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [],
+              "number_issues": [
+                "非数量主张"
+              ]
+            },
+            {
+              "source_id": "V2",
+              "source_claim_id": "V2-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "shift": "night",
+                "scale": "line"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [],
+              "number_issues": [
+                "非数量主张"
+              ]
+            }
+          ],
+          "best": null
+        },
+        {
+          "claim": {
+            "claim_id": "E1-C3",
+            "record_id": "E1",
+            "lang": "zh",
+            "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+            "claim_type": "measurement",
+            "metric": "yield",
+            "subject": null,
+            "scope": {
+              "shift": "night"
+            },
+            "baseline": null,
+            "current": null,
+            "delta": 10.0,
+            "delta_unit": "relative_percent",
+            "relative_pct": 10.0,
+            "direction": "up",
+            "modality": "asserted_observed",
+            "measured": null,
+            "comparator": "same_trial",
+            "time_phrase": "同一试验",
+            "trial": null,
+            "explicit_refs": [
+              "V1",
+              "V2"
+            ],
+            "anaphora": [
+              {
+                "phrase": "同一试验",
+                "refers_to": "contextual_reference"
+              }
+            ],
+            "provisional": false
+          },
+          "attempts": [
+            {
+              "source_id": "V1",
+              "source_claim_id": "V1-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [
+                "证据缺少night班次边界"
+              ],
+              "number_issues": [
+                "相对幅度不符：主张10%，证据相对变化14.29%"
+              ]
+            },
+            {
+              "source_id": "V2",
+              "source_claim_id": "V2-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "shift": "night",
+                "scale": "line"
+              },
+              "match": true,
+              "partial": false,
+              "score": 100,
+              "scope_issues": [],
+              "number_issues": []
+            }
+          ],
+          "best": {
+            "source_id": "V2",
+            "score": 100,
+            "partial": false,
+            "scope_issues": []
+          }
+        }
+      ],
+      "findings": [
+        {
+          "code": "DRAFT_OVER_LIMIT",
+          "severity": "warning",
+          "message": "来稿占 66 格，超过P1登记上限 55 格，不能原样上板",
+          "record_id": null,
+          "exhibit_id": "E1",
+          "source_ids": [],
+          "quote": null,
+          "details": {
+            "width": 66,
+            "limit": 55,
+            "surface_id": "P1"
+          }
+        },
+        {
+          "code": "WITHDRAWN_WITH_REPLACEMENT",
+          "severity": "correction",
+          "message": "V1 已撤回；可用同边界、同授权的 V4 作同义/复算替换，不能把两者说成独立印证",
+          "record_id": null,
+          "exhibit_id": "E1",
+          "source_ids": [
+            "V1",
+            "V4"
+          ],
+          "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+          "details": {
+            "replacement": "V4",
+            "equivalents": [
+              {
+                "candidate_source_id": "V4",
+                "candidate_claim_id": "V4-C1",
+                "same_trial": true,
+                "explicitly_relates": true,
+                "exact_boundary": true,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": true,
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+                "trial": "T8",
+                "match": {
+                  "match": true,
+                  "partial": false,
+                  "score": 100,
+                  "scope_issues": [],
+                  "number_issues": []
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": "AUTHORIZATION_MISSING",
+          "severity": "block",
+          "message": "V2 仅限编辑核查、未获外发授权，且无同边界授权替换件",
+          "record_id": null,
+          "exhibit_id": "E1",
+          "source_ids": [
+            "V2"
+          ],
+          "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+          "details": {
+            "equivalents": [
+              {
+                "candidate_source_id": "V1",
+                "candidate_claim_id": "V1-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+                "trial": "T8",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "证据缺少night班次边界"
+                  ],
+                  "number_issues": [
+                    "基线不符：主张60.0%，证据70.0%",
+                    "现值不符：主张66.0%，证据80.0%",
+                    "百分点差不符：主张6pp，证据10.0pp"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V3",
+                "candidate_claim_id": "V3-C1",
+                "same_trial": false,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+                "trial": "T9",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [],
+                  "number_issues": [
+                    "指标不同"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V4",
+                "candidate_claim_id": "V4-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+                "trial": "T8",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "证据缺少night班次边界"
+                  ],
+                  "number_issues": [
+                    "基线不符：主张60.0%，证据70.0%",
+                    "现值不符：主张66.0%，证据80.0%",
+                    "百分点差不符：主张6pp，证据10.0pp"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V5",
+                "candidate_claim_id": "V5-C1",
+                "same_trial": false,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+                "trial": "T10",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "对象线别不同：主张为L1，证据为L2",
+                    "班次范围不同：主张为night，证据为day"
+                  ],
+                  "number_issues": [
+                    "基线不符：主张60.0%，证据92.0%",
+                    "现值不符：主张66.0%，证据91.0%",
+                    "百分点差不符：主张6pp，证据1.0pp",
+                    "升降方向相反"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V6",
+                "candidate_claim_id": "V6-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+                "trial": "T8",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "班次范围不同：主张为night，证据为both",
+                    "对象范围过宽：主张为line，证据仅为未注明"
+                  ],
+                  "number_issues": [
+                    "百分点差不符：主张6pp，证据Nonepp"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": "PENDING_VERIFICATION",
+          "severity": "block",
+          "message": "“workshop”层级的验证结论没有同范围来文证据；该核心范围只能降级为待核，不能进入事实区",
+          "record_id": null,
+          "exhibit_id": "E1",
+          "source_ids": [
+            "V1",
+            "V2"
+          ],
+          "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+          "details": {
+            "claim": {
+              "claim_id": "E1-C2",
+              "record_id": "E1",
+              "lang": "zh",
+              "quote": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+              "claim_type": "validation",
+              "metric": "yield",
+              "subject": "workshop",
+              "scope": {
+                "scale": "workshop"
+              },
+              "baseline": null,
+              "current": null,
+              "delta": null,
+              "delta_unit": null,
+              "relative_pct": null,
+              "direction": null,
+              "modality": "asserted_observed",
+              "measured": null,
+              "comparator": "same_trial",
+              "time_phrase": "同一试验",
+              "trial": null,
+              "explicit_refs": [
+                "V1",
+                "V2"
+              ],
+              "anaphora": [
+                {
+                  "phrase": "同一试验",
+                  "refers_to": "contextual_reference"
+                }
+              ],
+              "provisional": false
+            }
+          }
+        },
+        {
+          "code": "RELATIVE_RATE_QUALIFIER_REQUIRED",
+          "severity": "warning",
+          "message": "“一成/10%”是相对基线的幅度；若要与“六个百分点”并列，必须写明“相对提高10%”，不能与6pp混写",
+          "record_id": null,
+          "exhibit_id": "E1",
+          "source_ids": [
+            "V2"
+          ],
+          "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+          "details": {}
+        }
+      ]
+    },
+    {
+      "exhibit_id": "E2",
+      "lang": "en",
+      "theme_id": "T1",
+      "topic": "改善良率",
+      "refs": [
+        "V1",
+        "V4"
+      ],
+      "draft": "Two independent validations confirm a 10% plant-wide yield increase.",
+      "draft_width": 68,
+      "primary_channel": "现场英文",
+      "primary_limit": 105,
+      "claims": [
+        {
+          "claim": {
+            "claim_id": "E2-C1",
+            "record_id": "E2",
+            "lang": "en",
+            "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+            "claim_type": "measurement",
+            "metric": "yield",
+            "subject": "plant",
+            "scope": {
+              "scale": "plant"
+            },
+            "baseline": null,
+            "current": null,
+            "delta": 10.0,
+            "delta_unit": "percent",
+            "relative_pct": null,
+            "direction": "up",
+            "modality": "asserted_observed",
+            "measured": null,
+            "comparator": null,
+            "time_phrase": null,
+            "trial": null,
+            "explicit_refs": [
+              "V1",
+              "V4"
+            ],
+            "anaphora": [],
+            "provisional": false
+          },
+          "attempts": [
+            {
+              "source_id": "V1",
+              "source_claim_id": "V1-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [
+                "对象范围过宽：主张为plant，证据仅为line"
+              ],
+              "number_issues": [
+                "相对幅度不符：主张10%，证据相对变化14.29%"
+              ]
+            },
+            {
+              "source_id": "V4",
+              "source_claim_id": "V4-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [
+                "对象范围过宽：主张为plant，证据仅为line"
+              ],
+              "number_issues": [
+                "相对幅度不符：主张10%，证据相对变化14.29%"
+              ]
+            }
+          ],
+          "best": null
+        },
+        {
+          "claim": {
+            "claim_id": "E2-C2",
+            "record_id": "E2",
+            "lang": "en",
+            "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+            "claim_type": "validation",
+            "metric": "yield",
+            "subject": "plant",
+            "scope": {
+              "scale": "plant",
+              "claimed_validation_count": 2,
+              "claimed_independent": true
+            },
+            "baseline": null,
+            "current": null,
+            "delta": null,
+            "delta_unit": null,
+            "relative_pct": null,
+            "direction": null,
+            "modality": "asserted_observed",
+            "measured": null,
+            "comparator": null,
+            "time_phrase": null,
+            "trial": null,
+            "explicit_refs": [
+              "V1",
+              "V4"
+            ],
+            "anaphora": [],
+            "provisional": false
+          },
+          "attempts": [
+            {
+              "source_id": "V1",
+              "source_claim_id": "V1-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [],
+              "number_issues": [
+                "非数量主张"
+              ]
+            },
+            {
+              "source_id": "V4",
+              "source_claim_id": "V4-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [],
+              "number_issues": [
+                "非数量主张"
+              ]
+            }
+          ],
+          "best": null
+        }
+      ],
+      "findings": [
+        {
+          "code": "WITHDRAWN_WITH_REPLACEMENT",
+          "severity": "correction",
+          "message": "V1 已撤回；可用同边界、同授权的 V4 作同义/复算替换，不能把两者说成独立印证",
+          "record_id": null,
+          "exhibit_id": "E2",
+          "source_ids": [
+            "V1",
+            "V4"
+          ],
+          "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+          "details": {
+            "replacement": "V4",
+            "equivalents": [
+              {
+                "candidate_source_id": "V4",
+                "candidate_claim_id": "V4-C1",
+                "same_trial": true,
+                "explicitly_relates": true,
+                "exact_boundary": true,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": true,
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+                "trial": "T8",
+                "match": {
+                  "match": true,
+                  "partial": false,
+                  "score": 100,
+                  "scope_issues": [],
+                  "number_issues": []
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": "SCOPE_ESCALATION",
+          "severity": "block",
+          "message": "对象范围过宽：主张为plant，证据仅为line",
+          "record_id": null,
+          "exhibit_id": "E2",
+          "source_ids": [
+            "V1"
+          ],
+          "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+          "details": {}
+        },
+        {
+          "code": "UNIT_MISMATCH",
+          "severity": "correction",
+          "message": "相对幅度不符：主张10%，证据相对变化14.29%",
+          "record_id": null,
+          "exhibit_id": "E2",
+          "source_ids": [
+            "V1"
+          ],
+          "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+          "details": {}
+        },
+        {
+          "code": "PENDING_VERIFICATION",
+          "severity": "block",
+          "message": "该主张的核心范围或单位不能由所引来文支持；在补证前只能列为待核",
+          "record_id": null,
+          "exhibit_id": "E2",
+          "source_ids": [
+            "V1",
+            "V4"
+          ],
+          "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+          "details": {
+            "claim": {
+              "claim_id": "E2-C1",
+              "record_id": "E2",
+              "lang": "en",
+              "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+              "claim_type": "measurement",
+              "metric": "yield",
+              "subject": "plant",
+              "scope": {
+                "scale": "plant"
+              },
+              "baseline": null,
+              "current": null,
+              "delta": 10.0,
+              "delta_unit": "percent",
+              "relative_pct": null,
+              "direction": "up",
+              "modality": "asserted_observed",
+              "measured": null,
+              "comparator": null,
+              "time_phrase": null,
+              "trial": null,
+              "explicit_refs": [
+                "V1",
+                "V4"
+              ],
+              "anaphora": [],
+              "provisional": false
+            },
+            "attempts": [
+              {
+                "source_id": "V1",
+                "source_claim_id": "V1-C1",
+                "evidence_modality": "observed",
+                "evidence_scope": {
+                  "line": "L1",
+                  "scale": "line"
+                },
+                "match": false,
+                "score": 0,
+                "scope_issues": [
+                  "对象范围过宽：主张为plant，证据仅为line"
+                ],
+                "number_issues": [
+                  "相对幅度不符：主张10%，证据相对变化14.29%"
+                ]
+              },
+              {
+                "source_id": "V4",
+                "source_claim_id": "V4-C1",
+                "evidence_modality": "observed",
+                "evidence_scope": {
+                  "line": "L1",
+                  "scale": "line"
+                },
+                "match": false,
+                "score": 0,
+                "scope_issues": [
+                  "对象范围过宽：主张为plant，证据仅为line"
+                ],
+                "number_issues": [
+                  "相对幅度不符：主张10%，证据相对变化14.29%"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "code": "FALSE_INDEPENDENCE",
+          "severity": "correction",
+          "message": "T8 中各文书有初稿/复算或引用关系，只能算一次试验，不能写成两次独立印证",
+          "record_id": null,
+          "exhibit_id": "E2",
+          "source_ids": [
+            "V1",
+            "V4"
+          ],
+          "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+          "details": {
+            "source_ids": [
+              "V1",
+              "V4"
+            ],
+            "trial_ids": [
+              "T8"
+            ],
+            "independent_trial_count": 1,
+            "distinct_coverage_count": 1,
+            "is_independent_validation": false,
+            "warning": "同一试验的初稿、复算或不同短写只能记为一次印证"
+          }
+        },
+        {
+          "code": "PENDING_VERIFICATION",
+          "severity": "block",
+          "message": "“plant”层级的验证结论没有同范围来文证据；该核心范围只能降级为待核，不能进入事实区",
+          "record_id": null,
+          "exhibit_id": "E2",
+          "source_ids": [
+            "V1",
+            "V4"
+          ],
+          "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+          "details": {
+            "claim": {
+              "claim_id": "E2-C2",
+              "record_id": "E2",
+              "lang": "en",
+              "quote": "Two independent validations confirm a 10% plant-wide yield increase.",
+              "claim_type": "validation",
+              "metric": "yield",
+              "subject": "plant",
+              "scope": {
+                "scale": "plant",
+                "claimed_validation_count": 2,
+                "claimed_independent": true
+              },
+              "baseline": null,
+              "current": null,
+              "delta": null,
+              "delta_unit": null,
+              "relative_pct": null,
+              "direction": null,
+              "modality": "asserted_observed",
+              "measured": null,
+              "comparator": null,
+              "time_phrase": null,
+              "trial": null,
+              "explicit_refs": [
+                "V1",
+                "V4"
+              ],
+              "anaphora": [],
+              "provisional": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "exhibit_id": "E3",
+      "lang": "zh",
+      "theme_id": "T2",
+      "topic": "返工计划",
+      "refs": [
+        "V3"
+      ],
+      "draft": "新设备使整体返工率下降 10%。",
+      "draft_width": 28,
+      "primary_channel": "现场中文",
+      "primary_limit": 55,
+      "claims": [
+        {
+          "claim": {
+            "claim_id": "E3-C1",
+            "record_id": "E3",
+            "lang": "zh",
+            "quote": "新设备使整体返工率下降 10%。",
+            "claim_type": "measurement",
+            "metric": "rework_rate",
+            "subject": "overall",
+            "scope": {
+              "scale": "overall",
+              "phase": "new_equipment_first_use"
+            },
+            "baseline": null,
+            "current": null,
+            "delta": 10.0,
+            "delta_unit": "percent",
+            "relative_pct": null,
+            "direction": "down",
+            "modality": "asserted_observed",
+            "measured": null,
+            "comparator": null,
+            "time_phrase": null,
+            "trial": null,
+            "explicit_refs": [
+              "V3"
+            ],
+            "anaphora": [],
+            "provisional": false
+          },
+          "attempts": [
+            {
+              "source_id": "V3",
+              "source_claim_id": "V3-C1",
+              "evidence_modality": "expected",
+              "evidence_scope": {
+                "scale": "overall"
+              },
+              "match": true,
+              "partial": false,
+              "score": 100,
+              "scope_issues": [],
+              "number_issues": []
+            }
+          ],
+          "best": {
+            "source_id": "V3",
+            "score": 100,
+            "partial": false,
+            "scope_issues": []
+          }
+        }
+      ],
+      "findings": [
+        {
+          "code": "MODALITY_MISMATCH",
+          "severity": "correction",
+          "message": "来稿用已发生语气报道，但来源仍在预估且未到测量期；公开稿必须写明“预计/预估、尚未测量”",
+          "record_id": null,
+          "exhibit_id": "E3",
+          "source_ids": [
+            "V3"
+          ],
+          "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+          "details": {}
+        }
+      ]
+    },
+    {
+      "exhibit_id": "E4",
+      "lang": "en",
+      "theme_id": "T3",
+      "topic": "夜班表现",
+      "refs": [
+        "V2",
+        "V5"
+      ],
+      "draft": "In the same night trial, first-line yield rose by six percentage points.",
+      "draft_width": 72,
+      "primary_channel": "现场英文",
+      "primary_limit": 105,
+      "claims": [
+        {
+          "claim": {
+            "claim_id": "E4-C1",
+            "record_id": "E4",
+            "lang": "en",
+            "quote": "In the same night trial, first-line yield rose by six percentage points.",
+            "claim_type": "measurement",
+            "metric": "yield",
+            "subject": "L1",
+            "scope": {
+              "line": "L1",
+              "scale": "line",
+              "shift": "night"
+            },
+            "baseline": null,
+            "current": null,
+            "delta": 6.0,
+            "delta_unit": "percentage_point",
+            "relative_pct": null,
+            "direction": "up",
+            "modality": "asserted_observed",
+            "measured": null,
+            "comparator": "same_trial",
+            "time_phrase": "same night trial",
+            "trial": null,
+            "explicit_refs": [
+              "V2",
+              "V5"
+            ],
+            "anaphora": [
+              {
+                "phrase": "same night trial",
+                "refers_to": "contextual_reference"
+              }
+            ],
+            "provisional": false
+          },
+          "attempts": [
+            {
+              "source_id": "V2",
+              "source_claim_id": "V2-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "line": "L1",
+                "shift": "night",
+                "scale": "line"
+              },
+              "match": true,
+              "partial": false,
+              "score": 100,
+              "scope_issues": [],
+              "number_issues": []
+            },
+            {
+              "source_id": "V5",
+              "source_claim_id": "V5-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "phase": "after_changeover",
+                "line": "L2",
+                "scale": "line",
+                "shift": "day",
+                "collection_boundary": "day_shift_work_orders_only"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [
+                "对象线别不同：主张为L1，证据为L2",
+                "班次范围不同：主张为night，证据为day"
+              ],
+              "number_issues": [
+                "百分点差不符：主张6pp，证据1.0pp",
+                "升降方向相反"
+              ]
+            }
+          ],
+          "best": {
+            "source_id": "V2",
+            "score": 100,
+            "partial": false,
+            "scope_issues": []
+          }
+        }
+      ],
+      "findings": [
+        {
+          "code": "AUTHORIZATION_MISSING",
+          "severity": "block",
+          "message": "V2 仅限编辑核查、未获外发授权，且无同边界授权替换件",
+          "record_id": null,
+          "exhibit_id": "E4",
+          "source_ids": [
+            "V2"
+          ],
+          "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+          "details": {
+            "equivalents": [
+              {
+                "candidate_source_id": "V1",
+                "candidate_claim_id": "V1-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+                "trial": "T8",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "证据缺少night班次边界"
+                  ],
+                  "number_issues": [
+                    "基线不符：主张60.0%，证据70.0%",
+                    "现值不符：主张66.0%，证据80.0%",
+                    "百分点差不符：主张6pp，证据10.0pp"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V3",
+                "candidate_claim_id": "V3-C1",
+                "same_trial": false,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+                "trial": "T9",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [],
+                  "number_issues": [
+                    "指标不同"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V4",
+                "candidate_claim_id": "V4-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+                "trial": "T8",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "证据缺少night班次边界"
+                  ],
+                  "number_issues": [
+                    "基线不符：主张60.0%，证据70.0%",
+                    "现值不符：主张66.0%，证据80.0%",
+                    "百分点差不符：主张6pp，证据10.0pp"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V5",
+                "candidate_claim_id": "V5-C1",
+                "same_trial": false,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+                "trial": "T10",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "对象线别不同：主张为L1，证据为L2",
+                    "班次范围不同：主张为night，证据为day"
+                  ],
+                  "number_issues": [
+                    "基线不符：主张60.0%，证据92.0%",
+                    "现值不符：主张66.0%，证据91.0%",
+                    "百分点差不符：主张6pp，证据1.0pp",
+                    "升降方向相反"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V6",
+                "candidate_claim_id": "V6-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+                "trial": "T8",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "班次范围不同：主张为night，证据为both",
+                    "对象范围过宽：主张为line，证据仅为未注明"
+                  ],
+                  "number_issues": [
+                    "百分点差不符：主张6pp，证据Nonepp"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "exhibit_id": "E5",
+      "lang": "zh",
+      "theme_id": "T2",
+      "topic": "返工计划",
+      "refs": [
+        "V3",
+        "V6"
+      ],
+      "draft": "首次换型后日夜合计返工率预计减少一成。",
+      "draft_width": 38,
+      "primary_channel": "现场中文",
+      "primary_limit": 55,
+      "claims": [
+        {
+          "claim": {
+            "claim_id": "E5-C1",
+            "record_id": "E5",
+            "lang": "zh",
+            "quote": "首次换型后日夜合计返工率预计减少一成。",
+            "claim_type": "measurement",
+            "metric": "rework_rate",
+            "subject": null,
+            "scope": {
+              "shift": "both",
+              "aggregation": "day_night_total",
+              "phase": "after_changeover"
+            },
+            "baseline": null,
+            "current": null,
+            "delta": 10.0,
+            "delta_unit": "relative_percent",
+            "relative_pct": 10.0,
+            "direction": "down",
+            "modality": "expected",
+            "measured": false,
+            "comparator": null,
+            "time_phrase": null,
+            "trial": null,
+            "explicit_refs": [
+              "V3",
+              "V6"
+            ],
+            "anaphora": [],
+            "provisional": false
+          },
+          "attempts": [
+            {
+              "source_id": "V3",
+              "source_claim_id": "V3-C1",
+              "evidence_modality": "expected",
+              "evidence_scope": {
+                "scale": "overall"
+              },
+              "match": true,
+              "partial": true,
+              "score": 70,
+              "scope_issues": [
+                "缺少日夜合计口径",
+                "缺少首次换型后的阶段边界"
+              ],
+              "number_issues": []
+            },
+            {
+              "source_id": "V6",
+              "source_claim_id": "V6-C1",
+              "evidence_modality": "observed",
+              "evidence_scope": {
+                "shift": "both",
+                "aggregation": "day_night_total"
+              },
+              "match": false,
+              "score": 0,
+              "scope_issues": [],
+              "number_issues": [
+                "指标不同"
+              ]
+            }
+          ],
+          "best": {
+            "source_id": "V3",
+            "score": 70,
+            "partial": true,
+            "scope_issues": [
+              "缺少日夜合计口径",
+              "缺少首次换型后的阶段边界"
+            ]
+          }
+        }
+      ],
+      "findings": [
+        {
+          "code": "AUTHORIZATION_MISSING",
+          "severity": "block",
+          "message": "V6 仅限编辑核查、未获外发授权，且无同边界授权替换件",
+          "record_id": null,
+          "exhibit_id": "E5",
+          "source_ids": [
+            "V6"
+          ],
+          "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+          "details": {
+            "equivalents": [
+              {
+                "candidate_source_id": "V1",
+                "candidate_claim_id": "V1-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+                "trial": "T8",
+                "match": {
+                  "match": true,
+                  "partial": true,
+                  "score": 85,
+                  "scope_issues": [
+                    "缺少日夜合计口径"
+                  ],
+                  "number_issues": []
+                }
+              },
+              {
+                "candidate_source_id": "V4",
+                "candidate_claim_id": "V4-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+                "trial": "T8",
+                "match": {
+                  "match": true,
+                  "partial": true,
+                  "score": 85,
+                  "scope_issues": [
+                    "缺少日夜合计口径"
+                  ],
+                  "number_issues": []
+                }
+              },
+              {
+                "candidate_source_id": "V2",
+                "candidate_claim_id": "V2-C1",
+                "same_trial": true,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+                "trial": "T8",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "班次范围不同：主张为both，证据为night",
+                    "缺少日夜合计口径"
+                  ],
+                  "number_issues": []
+                }
+              },
+              {
+                "candidate_source_id": "V3",
+                "candidate_claim_id": "V3-C1",
+                "same_trial": false,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+                "trial": "T9",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [],
+                  "number_issues": [
+                    "指标不同"
+                  ]
+                }
+              },
+              {
+                "candidate_source_id": "V5",
+                "candidate_claim_id": "V5-C1",
+                "same_trial": false,
+                "explicitly_relates": false,
+                "exact_boundary": false,
+                "authorized_for_channel": true,
+                "authorization_reason": "未按渠道校验",
+                "equivalent": false,
+                "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+                "trial": "T10",
+                "match": {
+                  "match": false,
+                  "score": 0,
+                  "scope_issues": [
+                    "班次范围不同：主张为both，证据为day",
+                    "缺少日夜合计口径"
+                  ],
+                  "number_issues": []
+                }
+              }
+            ]
+          }
+        },
+        {
+          "code": "UNSUPPORTED_CORE_SCOPE",
+          "severity": "warning",
+          "message": "缺少日夜合计口径；无证据的扩写范围降级待核，只能保留来源实际覆盖的短写",
+          "record_id": null,
+          "exhibit_id": "E5",
+          "source_ids": [
+            "V3"
+          ],
+          "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+          "details": {}
+        },
+        {
+          "code": "UNSUPPORTED_CORE_SCOPE",
+          "severity": "warning",
+          "message": "缺少首次换型后的阶段边界；无证据的扩写范围降级待核，只能保留来源实际覆盖的短写",
+          "record_id": null,
+          "exhibit_id": "E5",
+          "source_ids": [
+            "V3"
+          ],
+          "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+          "details": {}
+        }
+      ]
+    }
+  ],
+  "replacement_search": {
+    "V1": [
+      {
+        "candidate_source_id": "V4",
+        "candidate_claim_id": "V4-C1",
+        "same_trial": true,
+        "explicitly_relates": true,
+        "exact_boundary": true,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": true,
+        "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+        "trial": "T8",
+        "match": {
+          "match": true,
+          "partial": false,
+          "score": 100,
+          "scope_issues": [],
+          "number_issues": []
+        }
+      },
+      {
+        "candidate_source_id": "V2",
+        "candidate_claim_id": "V2-C1",
+        "same_trial": true,
+        "explicitly_relates": true,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "基线不符：主张70.0%，证据60.0%",
+            "现值不符：主张80.0%，证据66.0%",
+            "百分点差不符：主张10pp，证据6.0pp"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V3",
+        "candidate_claim_id": "V3-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "trial": "T9",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V5",
+        "candidate_claim_id": "V5-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+        "trial": "T10",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "对象线别不同：主张为L1，证据为L2"
+          ],
+          "number_issues": [
+            "基线不符：主张70.0%，证据92.0%",
+            "现值不符：主张80.0%，证据91.0%",
+            "百分点差不符：主张10pp，证据1.0pp",
+            "升降方向相反"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V6",
+        "candidate_claim_id": "V6-C1",
+        "same_trial": true,
+        "explicitly_relates": true,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "对象范围过宽：主张为line，证据仅为未注明"
+          ],
+          "number_issues": [
+            "百分点差不符：主张10pp，证据Nonepp"
+          ]
+        }
+      }
+    ],
+    "V2": [
+      {
+        "candidate_source_id": "V1",
+        "candidate_claim_id": "V1-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "证据缺少night班次边界"
+          ],
+          "number_issues": [
+            "基线不符：主张60.0%，证据70.0%",
+            "现值不符：主张66.0%，证据80.0%",
+            "百分点差不符：主张6pp，证据10.0pp"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V3",
+        "candidate_claim_id": "V3-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "trial": "T9",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V4",
+        "candidate_claim_id": "V4-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "证据缺少night班次边界"
+          ],
+          "number_issues": [
+            "基线不符：主张60.0%，证据70.0%",
+            "现值不符：主张66.0%，证据80.0%",
+            "百分点差不符：主张6pp，证据10.0pp"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V5",
+        "candidate_claim_id": "V5-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+        "trial": "T10",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "对象线别不同：主张为L1，证据为L2",
+            "班次范围不同：主张为night，证据为day"
+          ],
+          "number_issues": [
+            "基线不符：主张60.0%，证据92.0%",
+            "现值不符：主张66.0%，证据91.0%",
+            "百分点差不符：主张6pp，证据1.0pp",
+            "升降方向相反"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V6",
+        "candidate_claim_id": "V6-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "班次范围不同：主张为night，证据为both",
+            "对象范围过宽：主张为line，证据仅为未注明"
+          ],
+          "number_issues": [
+            "百分点差不符：主张6pp，证据Nonepp"
+          ]
+        }
+      }
+    ],
+    "V3": [
+      {
+        "candidate_source_id": "V1",
+        "candidate_claim_id": "V1-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V2",
+        "candidate_claim_id": "V2-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V4",
+        "candidate_claim_id": "V4-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V5",
+        "candidate_claim_id": "V5-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+        "trial": "T10",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V6",
+        "candidate_claim_id": "V6-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      }
+    ],
+    "V4": [
+      {
+        "candidate_source_id": "V1",
+        "candidate_claim_id": "V1-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": true,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": true,
+        "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+        "trial": "T8",
+        "match": {
+          "match": true,
+          "partial": false,
+          "score": 100,
+          "scope_issues": [],
+          "number_issues": []
+        }
+      },
+      {
+        "candidate_source_id": "V2",
+        "candidate_claim_id": "V2-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "基线不符：主张70.0%，证据60.0%",
+            "现值不符：主张80.0%，证据66.0%",
+            "百分点差不符：主张10pp，证据6.0pp"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V3",
+        "candidate_claim_id": "V3-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "trial": "T9",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V5",
+        "candidate_claim_id": "V5-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+        "trial": "T10",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "对象线别不同：主张为L1，证据为L2"
+          ],
+          "number_issues": [
+            "基线不符：主张70.0%，证据92.0%",
+            "现值不符：主张80.0%，证据91.0%",
+            "百分点差不符：主张10pp，证据1.0pp",
+            "升降方向相反"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V6",
+        "candidate_claim_id": "V6-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "对象范围过宽：主张为line，证据仅为未注明"
+          ],
+          "number_issues": [
+            "百分点差不符：主张10pp，证据Nonepp"
+          ]
+        }
+      }
+    ],
+    "V5": [
+      {
+        "candidate_source_id": "V1",
+        "candidate_claim_id": "V1-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "对象线别不同：主张为L2，证据为L1",
+            "证据缺少day班次边界",
+            "缺少首次换型后的阶段边界",
+            "缺少相同采集边界"
+          ],
+          "number_issues": [
+            "基线不符：主张92.0%，证据70.0%",
+            "现值不符：主张91.0%，证据80.0%",
+            "百分点差不符：主张1pp，证据10.0pp",
+            "升降方向相反"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V2",
+        "candidate_claim_id": "V2-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "对象线别不同：主张为L2，证据为L1",
+            "班次范围不同：主张为day，证据为night",
+            "缺少首次换型后的阶段边界",
+            "缺少相同采集边界"
+          ],
+          "number_issues": [
+            "基线不符：主张92.0%，证据60.0%",
+            "现值不符：主张91.0%，证据66.0%",
+            "百分点差不符：主张1pp，证据6.0pp",
+            "升降方向相反"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V3",
+        "candidate_claim_id": "V3-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "trial": "T9",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V4",
+        "candidate_claim_id": "V4-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "对象线别不同：主张为L2，证据为L1",
+            "证据缺少day班次边界",
+            "缺少首次换型后的阶段边界",
+            "缺少相同采集边界"
+          ],
+          "number_issues": [
+            "基线不符：主张92.0%，证据70.0%",
+            "现值不符：主张91.0%，证据80.0%",
+            "百分点差不符：主张1pp，证据10.0pp",
+            "升降方向相反"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V6",
+        "candidate_claim_id": "V6-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "班次范围不同：主张为day，证据为both",
+            "对象范围过宽：主张为line，证据仅为未注明",
+            "缺少首次换型后的阶段边界",
+            "缺少相同采集边界"
+          ],
+          "number_issues": [
+            "百分点差不符：主张1pp，证据Nonepp"
+          ]
+        }
+      }
+    ],
+    "V6": [
+      {
+        "candidate_source_id": "V1",
+        "candidate_claim_id": "V1-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。",
+        "trial": "T8",
+        "match": {
+          "match": true,
+          "partial": true,
+          "score": 85,
+          "scope_issues": [
+            "缺少日夜合计口径"
+          ],
+          "number_issues": []
+        }
+      },
+      {
+        "candidate_source_id": "V4",
+        "candidate_claim_id": "V4-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。",
+        "trial": "T8",
+        "match": {
+          "match": true,
+          "partial": true,
+          "score": 85,
+          "scope_issues": [
+            "缺少日夜合计口径"
+          ],
+          "number_issues": []
+        }
+      },
+      {
+        "candidate_source_id": "V2",
+        "candidate_claim_id": "V2-C1",
+        "same_trial": true,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。",
+        "trial": "T8",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "班次范围不同：主张为both，证据为night",
+            "缺少日夜合计口径"
+          ],
+          "number_issues": []
+        }
+      },
+      {
+        "candidate_source_id": "V3",
+        "candidate_claim_id": "V3-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。",
+        "trial": "T9",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [],
+          "number_issues": [
+            "指标不同"
+          ]
+        }
+      },
+      {
+        "candidate_source_id": "V5",
+        "candidate_claim_id": "V5-C1",
+        "same_trial": false,
+        "explicitly_relates": false,
+        "exact_boundary": false,
+        "authorized_for_channel": true,
+        "authorization_reason": "未按渠道校验",
+        "equivalent": false,
+        "quote": "同期二号线也做了同名指标。转工装之前是 92%，之后是 91%，工单只在日班采集。",
+        "trial": "T10",
+        "match": {
+          "match": false,
+          "score": 0,
+          "scope_issues": [
+            "班次范围不同：主张为both，证据为day",
+            "缺少日夜合计口径"
+          ],
+          "number_issues": []
+        }
+      }
+    ]
+  },
+  "merge_reviews": [
+    {
+      "review_id": "MRG-T8-LINE-NIGHT",
+      "trial_id": "T8",
+      "common_or_recalculated_fact_id": "F-V4-C1",
+      "local_subgroup_fact_id": "F-V2-C1",
+      "would_merge_numbers": [
+        "一号线同周 70%→80%，+10pp（V1初稿/V4复算）",
+        "一号线夜班子组 60%→66%，+6pp，相对+10%（V2）"
+      ],
+      "lost_limits_if_merged": [
+        "V2 是仅审核的夜班细表，未获外发准许。",
+        "60%→66% 的绝对差是6个百分点，相对增幅才是10%/一成。",
+        "同一周全部车间并未纳入试验，不能把一号线写成全车间结论。",
+        "V6 两班汇总约80%只是供稿员暂填，没有正式报告且未授权外发。"
+      ],
+      "original_quotes": [
+        {
+          "source_id": "V1",
+          "quote": "试件车间一号线，良率由 70% 到 80%，一周对照，比上月同线。"
+        },
+        {
+          "source_id": "V2",
+          "quote": "同一周全部车间没纳入试验；一号线夜班良率由 60% 到 66%。"
+        },
+        {
+          "source_id": "V6",
+          "quote": "投产汇总的两班良率没有出正式报告，供稿员暂填约 80%。"
+        },
+        {
+          "source_id": "V4",
+          "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。"
+        }
+      ],
+      "same_trial_independent_count": 1,
+      "can_separately_retain_on_site": false,
+      "can_separately_retain_scan": false,
+      "decision_required_from_editor": true,
+      "permitted_decisions": [
+        "drop_external",
+        "retain_internal_only"
+      ],
+      "forbidden_decision": "publish_separate_without_authorization",
+      "editor_decision": null,
+      "effective_decision": "drop_external"
+    }
+  ],
+  "material_requests": [
+    {
+      "request_id": "MR-E4-NIGHT-AUTH",
+      "exhibit_id": "E4",
+      "theme": "夜班表现",
+      "needed_scope": "T8 试验中一号线夜班子组、同一周、良率基线60%与现值66%的外发授权；并确认按+6个百分点还是相对+10%表述。",
+      "acceptable_evidence": "V2 保管方出具的公开发布授权，或另一件已授权原件，且边界必须同为 T8、一号线、夜班、同一周及相同工单/采集范围。",
+      "rejected_candidates": [
+        {
+          "source_id": "V5",
+          "reason": "T10、二号线、日班采集，92%→91%，试验/线别/班次/方向均不同"
+        },
+        {
+          "source_id": "V6",
+          "reason": "仅审核、无正式报告、约80%为暂填，且是两班汇总而非夜班子组"
+        }
+      ],
+      "priority": "补充",
+      "formats": [
+        "现场中文",
+        "现场英文"
+      ],
+      "also_exhibit_ids": [
+        "E1"
+      ]
+    },
+    {
+      "request_id": "MR-E1-WORKSHOP",
+      "exhibit_id": "E1",
+      "theme": "改善良率",
+      "needed_scope": "可公开引用的全车间/全厂 T8 汇总良率报告，含基线、现值、周期、产线/班次覆盖和是否消除重件。",
+      "acceptable_evidence": "经统计/质量负责人签发的公开汇总件，覆盖边界至少等于稿中“全车间验证成功”。",
+      "rejected_candidates": [
+        {
+          "source_id": "V1/V4",
+          "reason": "仅覆盖试件车间一号线同一周，不能外推全车间"
+        },
+        {
+          "source_id": "V2",
+          "reason": "称同一周全部车间未纳入试验，且仅审核"
+        },
+        {
+          "source_id": "V6",
+          "reason": "两班良率约80%为暂填，无正式报告且仅审核"
+        }
+      ],
+      "priority": "必讲",
+      "formats": [
+        "现场中文",
+        "现场英文",
+        "扫码内页"
+      ],
+      "also_exhibit_ids": []
+    },
+    {
+      "request_id": "MR-E2-PLANT-INDEPENDENCE",
+      "exhibit_id": "E2",
+      "theme": "改善良率",
+      "needed_scope": "若保留 plant-wide 与 two independent validations，需要全厂口径审计件，以及与 V1/V4 无初稿—复算或引用关系的第二次独立试验。",
+      "acceptable_evidence": "覆盖全厂的基线/复核算术报告，加一个不同 trial 编号、不同数据集或独立机构出具的验证。",
+      "rejected_candidates": [
+        {
+          "source_id": "V1/V4",
+          "reason": "同为 T8；V4 明确 relates V1，是消除重件后的复算，不是独立验证"
+        }
+      ],
+      "priority": "必讲",
+      "formats": [
+        "现场中文",
+        "现场英文",
+        "扫码内页"
+      ],
+      "also_exhibit_ids": []
+    },
+    {
+      "request_id": "MR-E5-REWORK-AFTER-CHANGEOVER",
+      "exhibit_id": "E5",
+      "theme": "返工计划",
+      "needed_scope": "首次换型后、日夜合计的返工率实测/预测口径，含基线、目标或实测值、统计区间和授权渠道。",
+      "acceptable_evidence": "V3 保管方补充的换型后日夜合计测量期数据，或另一件覆盖该边界的扫码公开/现场公开原件。",
+      "rejected_candidates": [
+        {
+          "source_id": "V3",
+          "reason": "只支持新装备总体返工率预计降10%，明确未到测量期，未给换型后日夜合计边界"
+        },
+        {
+          "source_id": "V6",
+          "reason": "指标是两班良率且为暂填，不是返工率，也未授权外发"
+        }
+      ],
+      "priority": "补充",
+      "formats": [
+        "扫码内页"
+      ],
+      "also_exhibit_ids": []
+    }
+  ],
+  "plan": {
+    "selected_themes": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "boards": [
+      {
+        "surface_id": "P1",
+        "channel": "现场中文",
+        "language": "zh",
+        "limit": 55,
+        "used_cells": 54,
+        "entries": [
+          {
+            "entry_id": "P1-T1",
+            "theme_ids": [
+              "T1"
+            ],
+            "fact_ids": [
+              "F-V4-C1"
+            ],
+            "source_ids": [
+              "V4"
+            ],
+            "text": "良率：一号线70%至80%，升十个百分点；复算V4，比上月同线",
+            "width": 54,
+            "language": "zh",
+            "statement_kind": "fact",
+            "supports_shared_themes": false,
+            "components": {
+              "title": "良率",
+              "scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "baseline": 70.0,
+              "current": 80.0,
+              "delta": 10.0,
+              "delta_unit": "percentage_point",
+              "modality": "observed",
+              "comparator_code": "prior_month_same_line+same_week",
+              "comparator_text": "比上月同线",
+              "standalone": true,
+              "footnote_must_include": [
+                "comparator",
+                "unit",
+                "scope"
+              ]
+            }
+          }
+        ],
+        "notices": [],
+        "omitted_themes": [
+          {
+            "theme_id": "T3",
+            "theme": "夜班表现",
+            "channel": "现场中文",
+            "language": "zh",
+            "reason_code": "UNAVAILABLE_OR_UNAUTHORIZED",
+            "reason": "来源仅限编辑核查，未获外发授权",
+            "required": false,
+            "request_ids": [
+              "MR-E4-NIGHT-AUTH"
+            ]
+          }
+        ],
+        "feasible": true,
+        "remaining_cells": 1
+      },
+      {
+        "surface_id": "P2",
+        "channel": "现场英文",
+        "language": "en",
+        "limit": 105,
+        "used_cells": 104,
+        "entries": [
+          {
+            "entry_id": "P2-T1",
+            "theme_ids": [
+              "T1"
+            ],
+            "fact_ids": [
+              "F-V4-C1"
+            ],
+            "source_ids": [
+              "V4"
+            ],
+            "text": "Yield: Line1 70-80%, +10 percentage points (V4 recalc; vs prior-month same line; V1 withdrawn; 1 trial).",
+            "width": 104,
+            "language": "en",
+            "statement_kind": "fact",
+            "supports_shared_themes": false,
+            "components": {
+              "title": "Yield",
+              "scope": {
+                "line": "L1",
+                "scale": "line"
+              },
+              "baseline": 70.0,
+              "current": 80.0,
+              "delta": 10.0,
+              "delta_unit": "percentage_point",
+              "modality": "observed",
+              "comparator_code": "prior_month_same_line+same_week",
+              "comparator_text": "week vs prior-month same line",
+              "standalone": true,
+              "footnote_must_include": [
+                "comparator",
+                "unit",
+                "scope"
+              ]
+            }
+          }
+        ],
+        "notices": [],
+        "omitted_themes": [
+          {
+            "theme_id": "T3",
+            "theme": "夜班表现",
+            "channel": "现场英文",
+            "language": "en",
+            "reason_code": "UNAVAILABLE_OR_UNAUTHORIZED",
+            "reason": "来源仅限编辑核查，未获外发授权",
+            "required": false,
+            "request_ids": [
+              "MR-E4-NIGHT-AUTH"
+            ]
+          }
+        ],
+        "feasible": true,
+        "remaining_cells": 1
+      },
+      {
+        "surface_id": "P3",
+        "channel": "扫码内页",
+        "language": "bilingual",
+        "limit": 260,
+        "used_cells": 255,
+        "entries": [
+          {
+            "entry_id": "P3-INNER",
+            "theme_ids": [
+              "T1",
+              "T2"
+            ],
+            "fact_ids": [
+              "F-V4-C1",
+              "F-V3-C1"
+            ],
+            "source_ids": [
+              "V4",
+              "V3"
+            ],
+            "text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+            "width": 255,
+            "language": "bilingual",
+            "statement_kind": "inner_page",
+            "supports_shared_themes": true,
+            "components": {}
+          }
+        ],
+        "notices": [],
+        "omitted_themes": [],
+        "feasible": true,
+        "remaining_cells": 5
+      }
+    ],
+    "theme_coverage": {
+      "T1": [
+        {
+          "surface_id": "P1",
+          "channel": "现场中文",
+          "status": "covered",
+          "entry_id": "P1-T1",
+          "text": "良率：一号线70%至80%，升十个百分点；复算V4，比上月同线",
+          "width": 54,
+          "fact_ids": [
+            "F-V4-C1"
+          ],
+          "source_ids": [
+            "V4"
+          ]
+        },
+        {
+          "surface_id": "P2",
+          "channel": "现场英文",
+          "status": "covered",
+          "entry_id": "P2-T1",
+          "text": "Yield: Line1 70-80%, +10 percentage points (V4 recalc; vs prior-month same line; V1 withdrawn; 1 trial).",
+          "width": 104,
+          "fact_ids": [
+            "F-V4-C1"
+          ],
+          "source_ids": [
+            "V4"
+          ]
+        },
+        {
+          "surface_id": "P3",
+          "channel": "扫码内页",
+          "status": "covered",
+          "entry_id": "P3-INNER",
+          "text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+          "width": 255,
+          "fact_ids": [
+            "F-V4-C1"
+          ],
+          "source_ids": [
+            "V4"
+          ]
+        }
+      ],
+      "T2": [
+        {
+          "surface_id": "P3",
+          "channel": "扫码内页",
+          "status": "covered",
+          "entry_id": "P3-INNER",
+          "text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+          "width": 255,
+          "fact_ids": [
+            "F-V3-C1"
+          ],
+          "source_ids": [
+            "V3"
+          ]
+        }
+      ],
+      "T3": [
+        {
+          "surface_id": "P1",
+          "channel": "现场中文",
+          "status": "uncovered",
+          "theme_id": "T3",
+          "theme": "夜班表现",
+          "language": "zh",
+          "reason_code": "UNAVAILABLE_OR_UNAUTHORIZED",
+          "reason": "来源仅限编辑核查，未获外发授权",
+          "required": false,
+          "request_ids": [
+            "MR-E4-NIGHT-AUTH"
+          ]
+        },
+        {
+          "surface_id": "P2",
+          "channel": "现场英文",
+          "status": "uncovered",
+          "theme_id": "T3",
+          "theme": "夜班表现",
+          "language": "en",
+          "reason_code": "UNAVAILABLE_OR_UNAUTHORIZED",
+          "reason": "来源仅限编辑核查，未获外发授权",
+          "required": false,
+          "request_ids": [
+            "MR-E4-NIGHT-AUTH"
+          ]
+        }
+      ]
+    },
+    "theme_trace": [
+      {
+        "theme_id": "T1",
+        "theme": "改善良率",
+        "importance": "必讲",
+        "exhibit_ids": [
+          "E1",
+          "E2"
+        ],
+        "allowed_formats": [
+          "现场中文",
+          "现场英文",
+          "扫码内页"
+        ],
+        "surfaces": [
+          {
+            "surface_id": "P1",
+            "channel": "现场中文",
+            "status": "covered",
+            "entry_id": "P1-T1",
+            "text": "良率：一号线70%至80%，升十个百分点；复算V4，比上月同线",
+            "width": 54,
+            "fact_ids": [
+              "F-V4-C1"
+            ],
+            "source_ids": [
+              "V4"
+            ],
+            "expressed_facts": [
+              {
+                "fact_id": "F-V4-C1",
+                "metric": "yield",
+                "scope": {
+                  "line": "L1",
+                  "scale": "line"
+                },
+                "baseline": 70.0,
+                "current": 80.0,
+                "delta": 10.0,
+                "delta_unit": "percentage_point",
+                "modality": "observed",
+                "comparator": "prior_month_same_line+same_week",
+                "trial": "T8",
+                "source_id": "V4",
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。"
+              }
+            ]
+          },
+          {
+            "surface_id": "P2",
+            "channel": "现场英文",
+            "status": "covered",
+            "entry_id": "P2-T1",
+            "text": "Yield: Line1 70-80%, +10 percentage points (V4 recalc; vs prior-month same line; V1 withdrawn; 1 trial).",
+            "width": 104,
+            "fact_ids": [
+              "F-V4-C1"
+            ],
+            "source_ids": [
+              "V4"
+            ],
+            "expressed_facts": [
+              {
+                "fact_id": "F-V4-C1",
+                "metric": "yield",
+                "scope": {
+                  "line": "L1",
+                  "scale": "line"
+                },
+                "baseline": 70.0,
+                "current": 80.0,
+                "delta": 10.0,
+                "delta_unit": "percentage_point",
+                "modality": "observed",
+                "comparator": "prior_month_same_line+same_week",
+                "trial": "T8",
+                "source_id": "V4",
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。"
+              }
+            ]
+          },
+          {
+            "surface_id": "P3",
+            "channel": "扫码内页",
+            "status": "covered",
+            "entry_id": "P3-INNER",
+            "text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+            "width": 255,
+            "fact_ids": [
+              "F-V4-C1"
+            ],
+            "source_ids": [
+              "V4"
+            ],
+            "expressed_facts": [
+              {
+                "fact_id": "F-V4-C1",
+                "metric": "yield",
+                "scope": {
+                  "line": "L1",
+                  "scale": "line"
+                },
+                "baseline": 70.0,
+                "current": 80.0,
+                "delta": 10.0,
+                "delta_unit": "percentage_point",
+                "modality": "observed",
+                "comparator": "prior_month_same_line+same_week",
+                "trial": "T8",
+                "source_id": "V4",
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。"
+              }
+            ]
+          }
+        ],
+        "material_request_ids": [],
+        "covered": true
+      },
+      {
+        "theme_id": "T2",
+        "theme": "返工计划",
+        "importance": "补充",
+        "exhibit_ids": [
+          "E3",
+          "E5"
+        ],
+        "allowed_formats": [
+          "扫码内页"
+        ],
+        "surfaces": [
+          {
+            "surface_id": "P3",
+            "channel": "扫码内页",
+            "status": "covered",
+            "entry_id": "P3-INNER",
+            "text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+            "width": 255,
+            "fact_ids": [
+              "F-V3-C1"
+            ],
+            "source_ids": [
+              "V3"
+            ],
+            "expressed_facts": [
+              {
+                "fact_id": "F-V3-C1",
+                "metric": "rework_rate",
+                "scope": {
+                  "scale": "overall"
+                },
+                "baseline": null,
+                "current": null,
+                "delta": 10.0,
+                "delta_unit": "percent",
+                "modality": "expected",
+                "comparator": null,
+                "trial": "T9",
+                "source_id": "V3",
+                "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。"
+              }
+            ]
+          }
+        ],
+        "material_request_ids": [],
+        "covered": true
+      },
+      {
+        "theme_id": "T3",
+        "theme": "夜班表现",
+        "importance": "补充",
+        "exhibit_ids": [
+          "E4"
+        ],
+        "allowed_formats": [
+          "现场中文",
+          "现场英文"
+        ],
+        "surfaces": [
+          {
+            "surface_id": "P1",
+            "channel": "现场中文",
+            "status": "uncovered",
+            "theme_id": "T3",
+            "theme": "夜班表现",
+            "language": "zh",
+            "reason_code": "UNAVAILABLE_OR_UNAUTHORIZED",
+            "reason": "来源仅限编辑核查，未获外发授权",
+            "required": false,
+            "request_ids": [
+              "MR-E4-NIGHT-AUTH"
+            ],
+            "expressed_facts": []
+          },
+          {
+            "surface_id": "P2",
+            "channel": "现场英文",
+            "status": "uncovered",
+            "theme_id": "T3",
+            "theme": "夜班表现",
+            "language": "en",
+            "reason_code": "UNAVAILABLE_OR_UNAUTHORIZED",
+            "reason": "来源仅限编辑核查，未获外发授权",
+            "required": false,
+            "request_ids": [
+              "MR-E4-NIGHT-AUTH"
+            ],
+            "expressed_facts": []
+          }
+        ],
+        "material_request_ids": [
+          "MR-E4-NIGHT-AUTH"
+        ],
+        "covered": false
+      }
+    ],
+    "shared_sentence_check": {
+      "evaluated": true,
+      "theme_ids": [
+        "T1",
+        "T3"
+      ],
+      "one_sentence_may_cover_two_themes": false,
+      "language_support": {
+        "zh": false,
+        "en": false
+      },
+      "rule": "同一句短写只有在中文和英文都支持两项主题各自的范围时才成立；把两个半句话分别排印或重复排印不能算作一句双语达标",
+      "failure_reason": "T3 夜班事实 V2 未获外发授权，V5 边界不同；因此中文和英文均不能形成同时覆盖 T1+T3 的合规短写",
+      "duplicate_typesetting_counts_as_coverage": false
+    },
+    "priority_rule": "截稿时优先保留必讲主题；补充主题超格或缺授权时移除，并生成补材料范围"
+  },
+  "correction_release": {
+    "correction_id": "CORR-20261021-SYNC",
+    "issued_at": "2026-10-21T11:35",
+    "synchronized_languages": [
+      "zh",
+      "en"
+    ],
+    "single_fact_caliber": "一号线 T8 同周/比上月同线，70%→80%，+10个百分点；V1初稿由V4复算同义替换；V1/V4只算一次试验。",
+    "editions": {
+      "zh": {
+        "surface_id": "P1",
+        "language": "zh",
+        "corrected_text": "良率：一号线70%至80%，升十个百分点；复算V4，比上月同线",
+        "width": 54,
+        "limit": 55,
+        "fits": true,
+        "proposed_board_code": "N17-zh-r2",
+        "physical_phase": "上墙",
+        "whole_surface_stopped": false,
+        "retained_theme_ids": [
+          "T1"
+        ],
+        "stopped_claim_scopes": [
+          "全车间验证",
+          "未授权夜班细表"
+        ],
+        "physical_action": "已上墙且闭馆前不能回收：立即在二维码/板旁更正提示中标明旧版有误，闭馆后换挂 N17-zh-r2；不整板停发可凭据的一号线口径。"
+      },
+      "en": {
+        "surface_id": "P2",
+        "language": "en",
+        "corrected_text": "Yield: Line1 70-80%, +10 percentage points (V4 recalc; vs prior-month same line; V1 withdrawn; 1 trial).",
+        "width": 104,
+        "limit": 105,
+        "fits": true,
+        "proposed_board_code": "N17-en-r2",
+        "physical_phase": "已印未贴",
+        "whole_surface_stopped": false,
+        "retained_theme_ids": [
+          "T1"
+        ],
+        "stopped_claim_scopes": [
+          "plant-wide",
+          "two independent validations"
+        ],
+        "physical_action": "已印未贴：DA2/N17-en-r1 不得上墙，换印 N17-en-r2 后再安装；r1 封存或销毁，避免公众扫到未注明状态的旧码。同板改用已更正的一号线口径，不必取消整个展点。"
+      },
+      "scan_inner": {
+        "surface_id": "P3",
+        "language": "bilingual",
+        "corrected_text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+        "width": 255,
+        "limit": 260,
+        "fits": true,
+        "whole_surface_stopped": false,
+        "retained_theme_ids": [
+          "T1",
+          "T2"
+        ],
+        "physical_action": "开放扫码内页：更新 N17-web-r1 指向的页面并保留修订记录；纸质取阅内页用完即换，旧夹页加盖更正或撤下。"
+      }
+    }
+  },
+  "scan_responses": {
+    "N17-zh-r1": {
+      "board_code": "N17-zh-r1",
+      "issuance_id": "DA1",
+      "surface_id": "P1",
+      "channel": "现场中文",
+      "language": "zh",
+      "issued_at": "2026-10-21T09:00",
+      "exposure": "现场公众",
+      "physical_note": "已贴，旁边有印刷内页取阅处，回收须等闭馆",
+      "registered_edition": "r1",
+      "revision_history": [
+        {
+          "edition": "r1",
+          "at": "2026-10-21T09:00",
+          "state": "issued_and_wall_mounted",
+          "board_code": "N17-zh-r1"
+        },
+        {
+          "edition": "CORR-20261021-SYNC",
+          "at": "2026-10-21T11:35",
+          "state": "synchronized_correction_issued; QR correction live; r2 proof awaiting closure replacement"
+        }
+      ],
+      "current_correction_id": "CORR-20261021-SYNC",
+      "correction_issued_at": "2026-10-21T11:35",
+      "applicability_notice": "本结果按码标绑定的 N17-zh-r1 / DA1 中文上墙旧版出具；您眼前看到的仍是旧板，以下更正适用于该旧版。",
+      "old_board_correction_notice": "【旧板更正】V1 初稿已撤回；“全车间验证成功”无证据，“夜班提升一成”所依据的细表未获外发授权。可保留事实仅为：一号线70%至80%，升10个百分点（V4复算，比上月同线）。",
+      "physical_replacement_action": "已上墙且闭馆前不能回收：立即在二维码/板旁更正提示中标明旧版有误，闭馆后换挂 N17-zh-r2；不整板停发可凭据的一号线口径。",
+      "whole_surface_stopped": false,
+      "linked_inner_page": {
+        "board_code": "N17-web-r1",
+        "corrected_text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+        "width": 255,
+        "limit": 260
+      },
+      "bound_print_log_id": "L1",
+      "visible_registered_items": [
+        {
+          "exhibit_id": "E1",
+          "lang": "zh",
+          "topic": "改善良率",
+          "registered_text": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+          "width": 66
+        }
+      ],
+      "bound_source_status": [
+        {
+          "source_id": "V1",
+          "audience": "现场公开",
+          "status": "withdrawn",
+          "events": [
+            {
+              "at": "2026-10-21T11:20",
+              "note": "停止展板和扫码继续引用本试验初稿，保留区分初稿和复算的说明",
+              "effect": "withdraw",
+              "channels": [
+                "扫码内页",
+                "现场中文",
+                "现场英文"
+              ]
+            }
+          ],
+          "bound_channel": "现场中文",
+          "usable_now_for_bound_channel": false,
+          "current_reason": "来源已撤回，不能继续作为事实引用",
+          "usable_at_issuance_for_bound_channel": true,
+          "issuance_reason": "可用",
+          "usable_for_scan": false,
+          "scan_reason": "来源已撤回，不能继续作为事实引用"
+        }
+      ],
+      "public_findings": [
+        {
+          "exhibit_id": "E1",
+          "code": "DRAFT_OVER_LIMIT",
+          "severity": "warning",
+          "public_message": "原稿超过展板字格，已改用保留对照和限定的准确短写。"
+        },
+        {
+          "exhibit_id": "E1",
+          "code": "WITHDRAWN_WITH_REPLACEMENT",
+          "severity": "correction",
+          "public_message": "该初稿已撤回；当前页面只保留同边界复算/替换件支持的口径。"
+        },
+        {
+          "exhibit_id": "E1",
+          "code": "AUTHORIZATION_MISSING",
+          "severity": "block",
+          "public_message": "相关细表未获当前受众渠道外发授权，已从公开内容撤下。"
+        },
+        {
+          "exhibit_id": "E1",
+          "code": "PENDING_VERIFICATION",
+          "severity": "block",
+          "public_message": "该扩写范围暂无凭据，已列为待核，不在事实区展示。"
+        },
+        {
+          "exhibit_id": "E1",
+          "code": "RELATIVE_RATE_QUALIFIER_REQUIRED",
+          "severity": "warning",
+          "public_message": "该表述正在按编校意见更正。"
+        }
+      ],
+      "public_corrections": [
+        {
+          "exhibit_id": "E1",
+          "language": "zh",
+          "corrections": [
+            "“全车间验证成功”没有可公开凭据；现有证据只覆盖一号线，不能外推全车间。",
+            "“同一试验夜班也提升一成”所依细表未获外发授权，已从公开摘要撤下，不能作为夜班结论引用。",
+            "V1 初稿已撤回；一号线数字现以 V4 复算段为准。"
+          ]
+        }
+      ],
+      "still_credentialed_content": "良率：一号线70%至80%，升十个百分点；复算V4，比上月同线",
+      "still_credentialed_rule": "只列仍有同边界证据和渠道授权的内容；撤回件原话仅用于更正/版本说明，不再作为事实。",
+      "revision_status": "wall_edition_r1_visible_pending_closure_replacement"
+    },
+    "N17-en-r1": {
+      "board_code": "N17-en-r1",
+      "issuance_id": "DA2",
+      "surface_id": "P2",
+      "channel": "现场英文",
+      "language": "en",
+      "issued_at": "2026-10-21T10:00",
+      "exposure": "现场公众",
+      "physical_note": "英文板已印，尚在布展台",
+      "registered_edition": "r1",
+      "revision_history": [
+        {
+          "edition": "r1",
+          "at": "2026-10-21T10:00",
+          "state": "printed_not_installed; withhold this edition",
+          "board_code": "N17-en-r1"
+        },
+        {
+          "edition": "CORR-20261021-SYNC",
+          "at": "2026-10-21T11:35",
+          "state": "synchronized_correction_issued; reprint r2 before installation"
+        }
+      ],
+      "current_correction_id": "CORR-20261021-SYNC",
+      "correction_issued_at": "2026-10-21T11:35",
+      "applicability_notice": "This result is bound to N17-en-r1 / DA2, the printed-but-not-installed English edition. Do not treat r1 as the current public board.",
+      "old_board_correction_notice": "[Correction] “Two independent validations” and “plant-wide” are not supported. V1 is withdrawn; V4 is a same-trial recalculation. Credentialed fact: Line1 70%-80%, +10pp.",
+      "physical_replacement_action": "已印未贴：DA2/N17-en-r1 不得上墙，换印 N17-en-r2 后再安装；r1 封存或销毁，避免公众扫到未注明状态的旧码。同板改用已更正的一号线口径，不必取消整个展点。",
+      "whole_surface_stopped": false,
+      "linked_inner_page": {
+        "board_code": "N17-web-r1",
+        "corrected_text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+        "width": 255,
+        "limit": 260
+      },
+      "bound_print_log_id": "L2",
+      "visible_registered_items": [
+        {
+          "exhibit_id": "E2",
+          "lang": "en",
+          "topic": "改善良率",
+          "registered_text": "Two independent validations confirm a 10% plant-wide yield increase.",
+          "width": 68
+        }
+      ],
+      "bound_source_status": [
+        {
+          "source_id": "V1",
+          "audience": "现场公开",
+          "status": "withdrawn",
+          "events": [
+            {
+              "at": "2026-10-21T11:20",
+              "note": "停止展板和扫码继续引用本试验初稿，保留区分初稿和复算的说明",
+              "effect": "withdraw",
+              "channels": [
+                "扫码内页",
+                "现场中文",
+                "现场英文"
+              ]
+            }
+          ],
+          "bound_channel": "现场英文",
+          "usable_now_for_bound_channel": false,
+          "current_reason": "来源已撤回，不能继续作为事实引用",
+          "usable_at_issuance_for_bound_channel": true,
+          "issuance_reason": "可用",
+          "usable_for_scan": false,
+          "scan_reason": "来源已撤回，不能继续作为事实引用"
+        },
+        {
+          "source_id": "V4",
+          "audience": "现场公开",
+          "status": "active",
+          "events": [
+            {
+              "at": "2026-10-21T11:25",
+              "note": "复算段可以用于本届公众展板和扫码页",
+              "effect": "allow",
+              "channels": [
+                "扫码内页",
+                "现场中文",
+                "现场英文"
+              ]
+            }
+          ],
+          "bound_channel": "现场英文",
+          "usable_now_for_bound_channel": true,
+          "current_reason": "可用",
+          "usable_at_issuance_for_bound_channel": true,
+          "issuance_reason": "可用",
+          "usable_for_scan": true,
+          "scan_reason": "可用"
+        }
+      ],
+      "public_findings": [
+        {
+          "exhibit_id": "E2",
+          "code": "WITHDRAWN_WITH_REPLACEMENT",
+          "severity": "correction",
+          "public_message": "该初稿已撤回；当前页面只保留同边界复算/替换件支持的口径。"
+        },
+        {
+          "exhibit_id": "E2",
+          "code": "SCOPE_ESCALATION",
+          "severity": "block",
+          "public_message": "来稿范围宽于证据边界，已按证据所示对象范围更正。"
+        },
+        {
+          "exhibit_id": "E2",
+          "code": "UNIT_MISMATCH",
+          "severity": "correction",
+          "public_message": "百分率差值与相对百分比不是同一单位，已按证据更正。"
+        },
+        {
+          "exhibit_id": "E2",
+          "code": "PENDING_VERIFICATION",
+          "severity": "block",
+          "public_message": "该扩写范围暂无凭据，已列为待核，不在事实区展示。"
+        },
+        {
+          "exhibit_id": "E2",
+          "code": "FALSE_INDEPENDENCE",
+          "severity": "correction",
+          "public_message": "初稿与复算件属于同一试验，不能算作两次独立印证。"
+        },
+        {
+          "exhibit_id": "E2",
+          "code": "PENDING_VERIFICATION",
+          "severity": "block",
+          "public_message": "该扩写范围暂无凭据，已列为待核，不在事实区展示。"
+        }
+      ],
+      "public_corrections": [
+        {
+          "exhibit_id": "E2",
+          "language": "en",
+          "corrections": [
+            "“Two independent validations” is incorrect: V1 and V4 belong to T8 and V4 is a recalculation.",
+            "“Plant-wide” is unsupported; the evidence covers Line 1.",
+            "The supported change is +10 percentage points from 70% to 80%, not a relative 10% increase."
+          ]
+        }
+      ],
+      "still_credentialed_content": "Yield: Line1 70-80%, +10 percentage points (V4 recalc; vs prior-month same line; V1 withdrawn; 1 trial).",
+      "still_credentialed_rule": "只列仍有同边界证据和渠道授权的内容；撤回件原话仅用于更正/版本说明，不再作为事实。",
+      "revision_status": "printed_r1_withheld_replace_before_install"
+    },
+    "N17-web-r1": {
+      "board_code": "N17-web-r1",
+      "issuance_id": "DA3",
+      "surface_id": "P3",
+      "channel": "扫码内页",
+      "language": "bilingual",
+      "issued_at": "2026-10-21T10:00",
+      "exposure": "扫码公众",
+      "physical_note": "栏目由现场两种二维码都可到达",
+      "registered_edition": "r1",
+      "revision_history": [
+        {
+          "edition": "r1",
+          "at": "2026-10-21T10:00",
+          "state": "scan_edition_issued",
+          "board_code": "N17-web-r1"
+        },
+        {
+          "edition": "CORR-20261021-SYNC",
+          "at": "2026-10-21T11:35",
+          "state": "bilingual_page_revised_in_place_with_history"
+        }
+      ],
+      "current_correction_id": "CORR-20261021-SYNC",
+      "correction_issued_at": "2026-10-21T11:35",
+      "applicability_notice": "本结果按 N17-web-r1 / DA3 扫码内页出具；页面已按同步更正口径修订，并保留出具与修订记录。/ This is the N17-web-r1 / DA3 scan inner page with the synchronized revision history.",
+      "old_board_correction_notice": "扫码页当前仅展示有授权、有凭据的事实；无证据扩写列为待核。",
+      "physical_replacement_action": "开放扫码内页：更新 N17-web-r1 指向的页面并保留修订记录；纸质取阅内页用完即换，旧夹页加盖更正或撤下。",
+      "whole_surface_stopped": false,
+      "linked_inner_page": null,
+      "bound_print_log_id": "L3",
+      "visible_registered_items": [
+        {
+          "exhibit_id": "E1",
+          "lang": "zh",
+          "topic": "改善良率",
+          "registered_text": "一号线良率提升十个百分点，全车间验证成功。同一试验夜班也提升一成。",
+          "width": 66
+        },
+        {
+          "exhibit_id": "E3",
+          "lang": "zh",
+          "topic": "返工计划",
+          "registered_text": "新设备使整体返工率下降 10%。",
+          "width": 28
+        }
+      ],
+      "bound_source_status": [
+        {
+          "source_id": "V1",
+          "audience": "现场公开",
+          "status": "withdrawn",
+          "events": [
+            {
+              "at": "2026-10-21T11:20",
+              "note": "停止展板和扫码继续引用本试验初稿，保留区分初稿和复算的说明",
+              "effect": "withdraw",
+              "channels": [
+                "扫码内页",
+                "现场中文",
+                "现场英文"
+              ]
+            }
+          ],
+          "bound_channel": "扫码内页",
+          "usable_now_for_bound_channel": false,
+          "current_reason": "来源已撤回，不能继续作为事实引用",
+          "usable_at_issuance_for_bound_channel": false,
+          "issuance_reason": "来件最高披露范围为现场公开，未授权扫码内页",
+          "usable_for_scan": false,
+          "scan_reason": "来源已撤回，不能继续作为事实引用"
+        },
+        {
+          "source_id": "V3",
+          "audience": "扫码公开",
+          "status": "active",
+          "events": [],
+          "bound_channel": "扫码内页",
+          "usable_now_for_bound_channel": true,
+          "current_reason": "可用",
+          "usable_at_issuance_for_bound_channel": true,
+          "issuance_reason": "可用",
+          "usable_for_scan": true,
+          "scan_reason": "可用"
+        }
+      ],
+      "public_findings": [
+        {
+          "exhibit_id": "E1",
+          "code": "DRAFT_OVER_LIMIT",
+          "severity": "warning",
+          "public_message": "原稿超过展板字格，已改用保留对照和限定的准确短写。"
+        },
+        {
+          "exhibit_id": "E1",
+          "code": "WITHDRAWN_WITH_REPLACEMENT",
+          "severity": "correction",
+          "public_message": "该初稿已撤回；当前页面只保留同边界复算/替换件支持的口径。"
+        },
+        {
+          "exhibit_id": "E1",
+          "code": "AUTHORIZATION_MISSING",
+          "severity": "block",
+          "public_message": "相关细表未获当前受众渠道外发授权，已从公开内容撤下。"
+        },
+        {
+          "exhibit_id": "E1",
+          "code": "PENDING_VERIFICATION",
+          "severity": "block",
+          "public_message": "该扩写范围暂无凭据，已列为待核，不在事实区展示。"
+        },
+        {
+          "exhibit_id": "E1",
+          "code": "RELATIVE_RATE_QUALIFIER_REQUIRED",
+          "severity": "warning",
+          "public_message": "该表述正在按编校意见更正。"
+        },
+        {
+          "exhibit_id": "E3",
+          "code": "MODALITY_MISMATCH",
+          "severity": "correction",
+          "public_message": "该结果仍属预计且尚未测量，不能写成已发生成效。"
+        }
+      ],
+      "public_corrections": [
+        {
+          "exhibit_id": "E1",
+          "language": "zh",
+          "corrections": [
+            "“全车间验证成功”没有可公开凭据；现有证据只覆盖一号线，不能外推全车间。",
+            "“同一试验夜班也提升一成”所依细表未获外发授权，已从公开摘要撤下，不能作为夜班结论引用。",
+            "V1 初稿已撤回；一号线数字现以 V4 复算段为准。"
+          ],
+          "corrections_en": [
+            "“Workshop-wide validation succeeded” is not credentialed; evidence covers Line 1 only.",
+            "The night-shift detail is not cleared for public release and has been removed.",
+            "Draft V1 is withdrawn; the Line 1 figure follows recalculation V4."
+          ]
+        },
+        {
+          "exhibit_id": "E3",
+          "language": "zh",
+          "corrections": [
+            "“新设备使返工率下降”是已发生语气；V3 仅为预计总体返工率下降10%，且未到测量期。"
+          ],
+          "corrections_en": [
+            "The rework reduction is a forecast of a 10% overall decrease under V3, not a measured result."
+          ]
+        }
+      ],
+      "still_credentialed_content": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+      "still_credentialed_rule": "只列仍有同边界证据和渠道授权的内容；撤回件原话仅用于更正/版本说明，不再作为事实。",
+      "revision_status": "scan_edition_revised_with_history"
+    }
+  },
+  "editor_audit": {
+    "theme_to_surface_facts": [
+      {
+        "theme_id": "T1",
+        "theme": "改善良率",
+        "importance": "必讲",
+        "exhibit_ids": [
+          "E1",
+          "E2"
+        ],
+        "allowed_formats": [
+          "现场中文",
+          "现场英文",
+          "扫码内页"
+        ],
+        "surfaces": [
+          {
+            "surface_id": "P1",
+            "channel": "现场中文",
+            "status": "covered",
+            "entry_id": "P1-T1",
+            "text": "良率：一号线70%至80%，升十个百分点；复算V4，比上月同线",
+            "width": 54,
+            "fact_ids": [
+              "F-V4-C1"
+            ],
+            "source_ids": [
+              "V4"
+            ],
+            "expressed_facts": [
+              {
+                "fact_id": "F-V4-C1",
+                "metric": "yield",
+                "scope": {
+                  "line": "L1",
+                  "scale": "line"
+                },
+                "baseline": 70.0,
+                "current": 80.0,
+                "delta": 10.0,
+                "delta_unit": "percentage_point",
+                "modality": "observed",
+                "comparator": "prior_month_same_line+same_week",
+                "trial": "T8",
+                "source_id": "V4",
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。"
+              }
+            ]
+          },
+          {
+            "surface_id": "P2",
+            "channel": "现场英文",
+            "status": "covered",
+            "entry_id": "P2-T1",
+            "text": "Yield: Line1 70-80%, +10 percentage points (V4 recalc; vs prior-month same line; V1 withdrawn; 1 trial).",
+            "width": 104,
+            "fact_ids": [
+              "F-V4-C1"
+            ],
+            "source_ids": [
+              "V4"
+            ],
+            "expressed_facts": [
+              {
+                "fact_id": "F-V4-C1",
+                "metric": "yield",
+                "scope": {
+                  "line": "L1",
+                  "scale": "line"
+                },
+                "baseline": 70.0,
+                "current": 80.0,
+                "delta": 10.0,
+                "delta_unit": "percentage_point",
+                "modality": "observed",
+                "comparator": "prior_month_same_line+same_week",
+                "trial": "T8",
+                "source_id": "V4",
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。"
+              }
+            ]
+          },
+          {
+            "surface_id": "P3",
+            "channel": "扫码内页",
+            "status": "covered",
+            "entry_id": "P3-INNER",
+            "text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+            "width": 255,
+            "fact_ids": [
+              "F-V4-C1"
+            ],
+            "source_ids": [
+              "V4"
+            ],
+            "expressed_facts": [
+              {
+                "fact_id": "F-V4-C1",
+                "metric": "yield",
+                "scope": {
+                  "line": "L1",
+                  "scale": "line"
+                },
+                "baseline": 70.0,
+                "current": 80.0,
+                "delta": 10.0,
+                "delta_unit": "percentage_point",
+                "modality": "observed",
+                "comparator": "prior_month_same_line+same_week",
+                "trial": "T8",
+                "source_id": "V4",
+                "quote": "同一条一号线同一周，统计复盘消除重件后仍为 70% 至 80%。"
+              }
+            ]
+          }
+        ],
+        "material_request_ids": [],
+        "covered": true
+      },
+      {
+        "theme_id": "T2",
+        "theme": "返工计划",
+        "importance": "补充",
+        "exhibit_ids": [
+          "E3",
+          "E5"
+        ],
+        "allowed_formats": [
+          "扫码内页"
+        ],
+        "surfaces": [
+          {
+            "surface_id": "P3",
+            "channel": "扫码内页",
+            "status": "covered",
+            "entry_id": "P3-INNER",
+            "text": "中：一号线70%-80%，+10个百分点（复算V4；比上月同线）。返工预计总体-10%（V3，尚未测量）。\nEN: Line1 70-80%,+10pp(V4 recalc;week vs prior-month same line). Rework: forecast overall -10%(V3,unmeasured).\nV1初稿撤回；V1/V4同T8。\nV1 withdrawn; V1/V4 same T8 trial.",
+            "width": 255,
+            "fact_ids": [
+              "F-V3-C1"
+            ],
+            "source_ids": [
+              "V3"
+            ],
+            "expressed_facts": [
+              {
+                "fact_id": "F-V3-C1",
+                "metric": "rework_rate",
+                "scope": {
+                  "scale": "overall"
+                },
+                "baseline": null,
+                "current": null,
+                "delta": 10.0,
+                "delta_unit": "percent",
+                "modality": "expected",
+                "comparator": null,
+                "trial": "T9",
+                "source_id": "V3",
+                "quote": "首次用新装备，预计总体返工率下降 10%，未到测量期。"
+              }
+            ]
+          }
+        ],
+        "material_request_ids": [],
+        "covered": true
+      },
+      {
+        "theme_id": "T3",
+        "theme": "夜班表现",
+        "importance": "补充",
+        "exhibit_ids": [
+          "E4"
+        ],
+        "allowed_formats": [
+          "现场中文",
+          "现场英文"
+        ],
+        "surfaces": [
+          {
+            "surface_id": "P1",
+            "channel": "现场中文",
+            "status": "uncovered",
+            "theme_id": "T3",
+            "theme": "夜班表现",
+            "language": "zh",
+            "reason_code": "UNAVAILABLE_OR_UNAUTHORIZED",
+            "reason": "来源仅限编辑核查，未获外发授权",
+            "required": false,
+            "request_ids": [
+              "MR-E4-NIGHT-AUTH"
+            ],
+            "expressed_facts": []
+          },
+          {
+            "surface_id": "P2",
+            "channel": "现场英文",
+            "status": "uncovered",
+            "theme_id": "T3",
+            "theme": "夜班表现",
+            "language": "en",
+            "reason_code": "UNAVAILABLE_OR_UNAUTHORIZED",
+            "reason": "来源仅限编辑核查，未获外发授权",
+            "required": false,
+            "request_ids": [
+              "MR-E4-NIGHT-AUTH"
+            ],
+            "expressed_facts": []
+          }
+        ],
+        "material_request_ids": [
+          "MR-E4-NIGHT-AUTH"
+        ],
+        "covered": false
+      }
+    ],
+    "uncoverable_themes": [
+      "T3"
+    ],
+    "material_requests_visible_to_owners": [
+      {
+        "request_id": "MR-E4-NIGHT-AUTH",
+        "exhibit_id": "E4",
+        "theme": "夜班表现",
+        "needed_scope": "T8 试验中一号线夜班子组、同一周、良率基线60%与现值66%的外发授权；并确认按+6个百分点还是相对+10%表述。",
+        "acceptable_evidence": "V2 保管方出具的公开发布授权，或另一件已授权原件，且边界必须同为 T8、一号线、夜班、同一周及相同工单/采集范围。",
+        "rejected_candidates": [
+          {
+            "source_id": "V5",
+            "reason": "T10、二号线、日班采集，92%→91%，试验/线别/班次/方向均不同"
+          },
+          {
+            "source_id": "V6",
+            "reason": "仅审核、无正式报告、约80%为暂填，且是两班汇总而非夜班子组"
+          }
+        ],
+        "priority": "补充",
+        "formats": [
+          "现场中文",
+          "现场英文"
+        ],
+        "also_exhibit_ids": [
+          "E1"
+        ]
+      },
+      {
+        "request_id": "MR-E1-WORKSHOP",
+        "exhibit_id": "E1",
+        "theme": "改善良率",
+        "needed_scope": "可公开引用的全车间/全厂 T8 汇总良率报告，含基线、现值、周期、产线/班次覆盖和是否消除重件。",
+        "acceptable_evidence": "经统计/质量负责人签发的公开汇总件，覆盖边界至少等于稿中“全车间验证成功”。",
+        "rejected_candidates": [
+          {
+            "source_id": "V1/V4",
+            "reason": "仅覆盖试件车间一号线同一周，不能外推全车间"
+          },
+          {
+            "source_id": "V2",
+            "reason": "称同一周全部车间未纳入试验，且仅审核"
+          },
+          {
+            "source_id": "V6",
+            "reason": "两班良率约80%为暂填，无正式报告且仅审核"
+          }
+        ],
+        "priority": "必讲",
+        "formats": [
+          "现场中文",
+          "现场英文",
+          "扫码内页"
+        ],
+        "also_exhibit_ids": []
+      },
+      {
+        "request_id": "MR-E2-PLANT-INDEPENDENCE",
+        "exhibit_id": "E2",
+        "theme": "改善良率",
+        "needed_scope": "若保留 plant-wide 与 two independent validations，需要全厂口径审计件，以及与 V1/V4 无初稿—复算或引用关系的第二次独立试验。",
+        "acceptable_evidence": "覆盖全厂的基线/复核算术报告，加一个不同 trial 编号、不同数据集或独立机构出具的验证。",
+        "rejected_candidates": [
+          {
+            "source_id": "V1/V4",
+            "reason": "同为 T8；V4 明确 relates V1，是消除重件后的复算，不是独立验证"
+          }
+        ],
+        "priority": "必讲",
+        "formats": [
+          "现场中文",
+          "现场英文",
+          "扫码内页"
+        ],
+        "also_exhibit_ids": []
+      },
+      {
+        "request_id": "MR-E5-REWORK-AFTER-CHANGEOVER",
+        "exhibit_id": "E5",
+        "theme": "返工计划",
+        "needed_scope": "首次换型后、日夜合计的返工率实测/预测口径，含基线、目标或实测值、统计区间和授权渠道。",
+        "acceptable_evidence": "V3 保管方补充的换型后日夜合计测量期数据，或另一件覆盖该边界的扫码公开/现场公开原件。",
+        "rejected_candidates": [
+          {
+            "source_id": "V3",
+            "reason": "只支持新装备总体返工率预计降10%，明确未到测量期，未给换型后日夜合计边界"
+          },
+          {
+            "source_id": "V6",
+            "reason": "指标是两班良率且为暂填，不是返工率，也未授权外发"
+          }
+        ],
+        "priority": "补充",
+        "formats": [
+          "扫码内页"
+        ],
+        "also_exhibit_ids": []
+      }
+    ]
+  }
+}
